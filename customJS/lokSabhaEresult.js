@@ -903,25 +903,29 @@ function getCrntYear() {
 }
 function westBengal(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata2' style='background: #29A745;'>" +
+    "<tr><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</th><th class='tdata2' style='background: #FD8318;'>" +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</th><th class='tdata2' style='background: #FD2C2C;'>" +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</th><th class='tdata2' style='background: #BCBCBC;color:black'>OTH</th></tr>";
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    theadh[3] +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;color:white'>OTH</th></tr>";
   CombineTable = t + "<tr>" + CombineTable + "</tr>";
   $("#Up_data").html(CombineTable);
 }
 function assam(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata2' style='background: #FD8318;'>" +
+    "<tr><th class='tdata2' style='background: #ba3b0f;font-weight: 700;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</th><th class='tdata2' style='background: #5491FB;'>" +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</th><th class='tdata2' style='background: #FD2C2C;'>" +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</th><th class='tdata2' style='background: #BCBCBC;color:black'>OTH</th></tr>";
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    theadh[3] +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;color:white'>OTH</th></tr>";
   CombineTable =
     t +
     "<tr>" +
@@ -935,13 +939,15 @@ function assam(CombineTable, com2, theadh) {
 }
 function puducherry(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata2' style='background: #5491FB;'>" +
+    "<tr><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</th><th class='tdata2' style='background: #FD8318;'>" +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</th><th class='tdata2' style='background: #FD8318;'>" +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</th><th class='tdata2' style='background: #BCBCBC;color:black'>OTH</th></tr><tr>";
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    theadh[3] +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;color:white'>OTH</th></tr><tr>";
   CombineTable =
     t +
     "<tr>" +
@@ -955,13 +961,15 @@ function puducherry(CombineTable, com2, theadh) {
 }
 function tamilnadu(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata1' style='background: #29A745;' width='95'>" +
+    "<tr><th class='tdata1' style='background: #ba3b0f;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</th><th class='tdata1' style='background: #FD2C2C;' width='95'>" +
+    "</div></th><th class='tdata1' style='background: #ba3b0f;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</th><th class='tdata1' style='background: #1E1E1E;' width='95'>" +
+    "</div></th><th class='tdata1' style='background: #ba3b0f;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</th><th class='tdata1' style='background: #E60706;' width='95'>" +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    theadh[3] +
+    "</div></th><th class='tdata1' style='background: #ba3b0f;font-weight: 700;' width='95'>" +
     theadh[3];
   CombineTable =
     t +
@@ -976,13 +984,13 @@ function tamilnadu(CombineTable, com2, theadh) {
 }
 function kerala(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata2' style='background: #E60706;width: 95px'>" +
+    "<tr><th class='tdata2' style='background: #ba3b0f;font-weight: 700;width: 95px'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</th><th class='tdata2' style='background: #5491FB;' width='95'>" +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</th><th class='tdata2' style='background: #FD8318;'>" +
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</th><th class='tdata2' style='background: #BCBCBC;color:black'>OTH</th> </tr>";
+    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;color:white'>OTH</th> </tr>";
   CombineTable =
     t +
     "<tr>" +
@@ -2114,9 +2122,9 @@ $(document).ready(function () {
   electionResults();
   getLiveStateNews();
   bannerAdd();
-  setInterval(() => {
-    electionResults();
-  }, 30000);
+  // setInterval(() => {
+  //   electionResults();
+  // }, 30000);
   getDistrictResult();
   selectState();
   // getCrntYear();

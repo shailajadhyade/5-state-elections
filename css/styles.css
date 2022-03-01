@@ -23,16 +23,29 @@
 } */
 /* tr:nth-child(even) {background-color: #ddd;}
 tr:nth-child(odd) {background-color: #eee;} */
+.td-border tr th {
+	font-weight: 900px !important;
+} 
+.td-border tr td{
+	border: none;
+	border: 1px solid #dddddd !important;
+}
+
+.text-center{
+	text-align: center;
+}
 .select-opt{
 	background-color: #EEEEEE; 
 	color: black;
+}
+.selectState{
+	text-align: right;
+    padding-right: 5%;
 }
 #mySelect{
 	height: 40px; 
 	width: 200px; 
 	margin-top: 18px; 
-	float: right;
-    margin-right: 75px;
 	background-color: #F05C5C; 
 	color: white;
 	border-radius: 5% #F05C5C;
@@ -598,13 +611,17 @@ h1{
 
 .add-space {
 	text-align: -webkit-center;
-	margin:0 14%; 
+	/* margin-left: 10%;
+	margin-right: 10%; */
+	/* margin:0 14%;  */
 	/* width:100%; */
 }
 
 .add-space1 {
 	text-align: -webkit-center;
-	margin:0 14%; 
+	/* margin-left: 10%;
+	margin-right: 10%; */
+	/* margin:0 14%;  */
 	/* width:100%; */
 }
 
@@ -2801,11 +2818,11 @@ a.states-vip-blog {
 
 
 .state-name{
-	border-left: 4px solid #E50706;
+	border-left: 4px solid #ba3b0f;
 	padding-left: 15px;
 	font-size: 22px;
 	font-weight: 700;
-	color: #E10605;
+	color: #ba3b0f;
 	background: #EFEFEF;
 	width: 100%;
 	padding: 5px 0 5px 15px;
@@ -2872,9 +2889,10 @@ a.states-vip-blog {
 }
 .btn-group1{
 	width: 100%;
+	text-align: center;
 	/* / z-index: 99999; /
 	/ position: absolute; / */
-	margin: 20px 0 5px 12%;
+	margin: 20px 0 20px 0%;
 }
 .year{
 	/* background: #00011E;
