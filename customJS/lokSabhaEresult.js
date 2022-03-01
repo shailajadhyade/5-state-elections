@@ -815,20 +815,20 @@ function electionResults() {
         }
       }
       if (arr[j] == "UP") {
-        // $("#UpTotal").html(westTotal);
+        $("#UpTotal").html(westTotal);
         westBengal(CombineTable, com2, theadh);
       } else if (arr[j] == "PB") {
-        // $("#PbTotal").html(westTotal);
+        $("#PbTotal").html(westTotal);
         assam(CombineTable, com2, theadh);
       } else if (arr[j] == "UK") {
-        // $("#UkTotal").html(westTotal);
-        puducherry(CombineTable, com2, theadh);
+        $("#UkTotal").html(westTotal);
+        fiveStateTally(CombineTable, theadh,"UK");
       } else if (arr[j] == "GA") {
-        // $("#tamilTotal").html(westTotal);
-        tamilnadu(CombineTable, com2, theadh);
+        $("#tamilTotal").html(westTotal);
+        fiveStateTally(CombineTable, theadh,"GA");
       } else if (arr[j] == "MNP") {
-        // $("#keralaTotal").html(westTotal);
-        kerala(CombineTable, com2, theadh);
+        $("#keralaTotal").html(westTotal);
+        fiveStateTally(CombineTable, theadh,"MNP");
       }
     }
   });
@@ -884,6 +884,29 @@ function getCrntYear() {
   $("#previous-year").css("background-color", "#949494");
   // });
 }
+function fiveStateTally(CombineTable, theadh, state) {
+  var t="<tr>";
+  for(i=0;i<theadh.length;i++){
+    if(theadh[i]==="OTHERS"){
+      t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>OTH</div></th>";
+    }else {
+    t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +theadh[i] +"</div></th>";
+    }
+  }
+  CombineTable = t + "<tr>" + CombineTable + "</tr>";
+  if(state==="UP"){
+    $("#Up_data").html(CombineTable);
+  }else if(state === "PB"){
+    $("#Pb_data").html(CombineTable);
+  }else if(state === "UK"){
+    $("#Uk_data").html(CombineTable);
+  }else if(state==="MNP"){
+    $("#Mnr_data").html(CombineTable);
+  }else if(state === "GA"){
+    $("#Ga_data").html(CombineTable);
+  }
+}
+
 function westBengal(CombineTable, com2, theadh) {
   var t =
     "<tr><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +

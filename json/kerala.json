@@ -21,13 +21,13 @@
         {
         "state_id": "UP",
         "party_name": "INC",
-        "lead": "3",
+        "lead": "4",
         "total": 1
         },
         {
         "state_id": "UP",
         "party_name": "OTHERS",
-        "lead": "4",
+        "lead": "5",
         "total": 1
         },
         {
@@ -39,31 +39,31 @@
         {
         "state_id": "PB",
         "party_name": "INC",
-        "lead": "1",
+        "lead": "6",
         "total": 75
         },
         {
         "state_id": "PB",
         "party_name": "AAP",
-        "lead": "2",
+        "lead": "7",
         "total": 50
         },
         {
         "state_id": "PB",
         "party_name": "SAD+",
-        "lead": "3",
+        "lead": "8",
         "total": 0
         },
         {
         "state_id": "PB",
         "party_name": "BJP+",
-        "lead": "3",
+        "lead": "9",
         "total": 0
         },
         {
         "state_id": "PB",
         "party_name": "OTHERS",
-        "lead": "4",
+        "lead": "10",
         "total": 1
         },
         {
@@ -75,25 +75,25 @@
         {
         "state_id": "UK",
         "party_name": "BJP",
-        "lead": "0",
+        "lead": "11",
         "total": 75
         },
         {
         "state_id": "UK",
         "party_name": "INC",
-        "lead": "0",
+        "lead": "12",
         "total": 159
         },
         {
         "state_id": "UK",
         "party_name": "AAP",
-        "lead": "0",
+        "lead": "13",
         "total": 0
         },
         {
         "state_id": "UK",
         "party_name": "OTHERS",
-        "lead": "0",
+        "lead": "14",
         "total": 0
         },
         {
@@ -105,31 +105,31 @@
         {
         "state_id": "MNP",
         "party_name": "BJP",
-        "lead": "0",
+        "lead": "20",
         "total": 99
         },
         {
         "state_id": "MNP",
         "party_name": "INC+",
-        "lead": "0",
+        "lead": "21",
         "total": 41
         },
         {
         "state_id": "MNP",
         "party_name": "NPP",
-        "lead": "0",
+        "lead": "22",
         "total": 0
         },
         {
         "state_id": "MNP",
         "party_name": "JDU",
-        "lead": "0",
+        "lead": "23",
         "total": 0
         },
         {
         "state_id": "MNP",
         "party_name": "OTHERS",
-        "lead": "0",
+        "lead": "24",
         "total": 0
         },
         {
@@ -141,32 +141,32 @@
         {
         "state_id": "GA",
         "party_name": "BJP",
-        "lead": "4",
+        "lead": "15",
         "total": 8
         },
         {
         "state_id": "GA",
         "party_name": "INC+",
-        "lead": "4",
+        "lead": "16",
         "total": 16
         },
         {
         "state_id": "GA",
         "party_name": "TMC+",
-        "lead": "4",
+        "lead": "17",
         "total": 16
         },
         {
         "state_id": "GA",
         "party_name": "AAP",
-        "lead": "4",
+        "lead": "18",
         "total": 16
         },
             
         {
         "state_id": "GA",
         "party_name": "OTHERS",
-        "lead": "4",
+        "lead": "19",
         "total": 6
         },
         {

@@ -45,6 +45,11 @@
 		width: 73px !important;
 	}
 }
+@media only screen and (min-width : 1724px) {
+	.LW-width{
+		width: 73px !important;
+	}
+}
 @media only screen and (max-width : 1660px) {
 	.LW-width{
 		width: 50px !important;
