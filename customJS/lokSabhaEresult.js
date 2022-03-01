@@ -293,6 +293,7 @@ function getLiveStateNews() {
 
 // state wise Vip candidates
 function getVipResult() {
+  $('#resultName').html('Important Personalities 2022');
   $(".col-bg1").css("background-color", "#F1F1F1");
   $("#vip-list").show();
   $("#const-table").hide();
@@ -856,14 +857,14 @@ function getPrevYear() {
       $("#iframe-state").html(frame1);
     }else if( state_el == "Mn"){
       var frame1 =
-      '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="724"></iframe>';
+      '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="600" height="724"></iframe>';
       $("#iframe-state").html(frame1);
     }
 
   $("button.crnt-year").removeClass("clicked");
   $("button.prev-year").addClass("clicked");
   $("#previous-year").css("color", "white");
-  $("#previous-year").css("background-color", "#E00605");
+  $("#previous-year").css("background-color", "#B80403");
   $("#current-year").css("color", "black");
   $("#current-year").css("background-color", "#949494");
   // });
@@ -890,13 +891,13 @@ function getCrntYear() {
     $("#iframe-state").html(frame1);
   }else if( state_el == "Mn"){
     var frame1 =
-    '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="724"></iframe>';
+    '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="600" height="724"></iframe>';
     $("#iframe-state").html(frame1);
   }
   $("button.prev-year").removeClass("clicked");
   $("button.crnt-year").addClass("clicked");
   $("#current-year").css("color", "white");
-  $("#current-year").css("background-color", "#E00605");
+  $("#current-year").css("background-color", "#B80403");
   $("#previous-year").css("color", "black");
   $("#previous-year").css("background-color", "#949494");
   // });
@@ -990,6 +991,8 @@ function kerala(CombineTable, com2, theadh) {
     theadh[1] +
     "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    theadh[3] +
     "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;color:white'>OTH</th> </tr>";
   CombineTable =
     t +
@@ -1005,6 +1008,7 @@ function kerala(CombineTable, com2, theadh) {
 
 // state wise District result
 function getDistrictResult() {
+  $('#resultName').html('District wise Results 2022');
   $(".col-bg1").css("background-color", "#fff");
   $("#vip-list").hide();
   $("#tdSearch").hide();
@@ -1300,6 +1304,7 @@ function searchfun() {
 }
 // state wise party results
 function getPartyResult() {
+  $('#resultName').html('Party wise Results 2022');
   $("#vip-list").hide();
   $("#const-table").hide();
   $("#tdSearch").show();
@@ -1624,6 +1629,7 @@ function getPartyResult() {
 }
 // state wise constituency results
 function getConstResult() {
+  $('#resultName').html('Constituency wise Results 2022');
   $(".col-bg1").css("background-color", "#fff");
   $("#vip-list").hide();
   $("#tdSearch").show();
