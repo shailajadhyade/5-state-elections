@@ -31,8 +31,15 @@
 		/* margin-bottom: 0px ; */
 		margin: 7px 15% 0;
 	}
+	.lead-win{
+		word-break: break-word;
+	}
 }
-
+@media only screen and (min-width : 1740px) {
+	.UK-LW-width{
+		width: 78px !important;
+	}
+}
 @media only screen and (max-width : 1624px) {
 	
 	.puducherry-name{
@@ -50,6 +57,9 @@
 	}
 }
 @media only screen and (max-width : 1347px) {
+		.UK-LW-width{
+			width: 40px !important;
+		}
 	.state-name{
 		font-size: 18px;
 		padding: 5px 0 5px 10px;
@@ -117,6 +127,9 @@
 	}
 }
 @media only screen and (max-width: 1024px){
+	.LW-width{
+		width: 40px !important;
+	}
 	.pers-blg-text h4 {
 		font-size: 14px !important;
 		margin-left: 30px !important;
@@ -227,6 +240,7 @@
 	
 }
 @media only screen and (max-width : 1021px) {
+	
 	.pers-blg-text h4 {
 		font-size: 14px !important;
 		margin-left: 28px !important;
@@ -252,6 +266,9 @@
 }
 
 @media only screen and (max-width : 991px) {
+	.PB-padding-left{
+		padding-left: 0px !important;
+	}
 	#state-img{
 		margin-bottom: 4% ;
 	}
@@ -337,7 +354,7 @@
 @media only screen and (max-width : 997px) {
 
 	.PB-padding-left{
-		padding-left: 0px;
+		padding-left: 10px;
 	}
 }
 
@@ -442,7 +459,10 @@
 }
 	
 }
-@media only screen and (max-width: 539px){
+@media only screen and (max-width: 540px){
+	.UK-LW-width{
+		width: auto !important;
+	}
 	.resp-th-width tr td:first-child {
 		max-width: 80px;
 		
@@ -452,6 +472,9 @@
 	}
 }
 @media only screen and (max-width: 595px){
+	.lead-win{
+		font-size: 15px;
+	}
 	.pers-blg-text h4 {
 		 font-size: 14px !important;
 		 margin-left: 20px !important;
@@ -492,6 +515,9 @@
 }
 	}
 @media only screen and (max-width: 360px){
+	.lead-win{
+		font-size: 14px;
+	}
 	.btn-group1{
 		margin: 20px 0 20px 0%;
 	}
@@ -525,5 +551,13 @@
 @media only screen and (max-width: 320px){
 	.year{
 		font-size: 15px;
+	}
+	.lead-win{
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 281px){
+	.LW-width{
+		margin-left: -6px;
 	}
 }
