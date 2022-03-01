@@ -35,8 +35,9 @@ tr:nth-child(odd) {background-color: #eee;} */
 	text-align: center;
 }
 .select-opt{
-	background-color: #EEEEEE; 
-	color: black;
+	background-color: #FFFFFF; 
+	color: #B80403;
+	line-height: 2px;
 }
 .selectState{
 	text-align: right;
@@ -46,9 +47,12 @@ tr:nth-child(odd) {background-color: #eee;} */
 	height: 40px; 
 	width: 200px; 
 	margin-top: 18px; 
-	background-color: #F05C5C; 
+	background-color: #B80403; 
 	color: white;
-	border-radius: 5% #F05C5C;
+	border-radius: 5% #B80403;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 0.5px;
 } 
 /* #mySelect{ */
 	/* background-color: #F05C5C; 
