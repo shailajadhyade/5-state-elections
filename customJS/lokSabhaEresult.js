@@ -844,19 +844,19 @@ function getPrevYear() {
       $("#iframe-state").html(frame1);
     } else if ( state_el == "Pb") {
       var frame1 =
-        '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/41N0A/" scrolling="no" frameborder="0" style="border: none;" width="600" height="707"></iframe>';
+        '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/41N0A/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="707"></iframe>';
       $("#iframe-state").html(frame1);
     } else if ( state_el == "Uk") {
       var frame1 =
-        '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/I19Oa/" scrolling="no" frameborder="0" style="border: none;" width="600" height="583"></iframe>';
+        '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/I19Oa/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
       $("#iframe-state").html(frame1);
     } else if (state_el == "Goa" ) {
       var frame1 =
-        '<iframe title="Goa Winners" aria-label="Map" id="datawrapper-chart-eQjOz" src="https://datawrapper.dwcdn.net/eQjOz/" scrolling="no" frameborder="0" style="border: none;" width="600" height="683"></iframe>';
+        '<iframe title="Goa Winners" aria-label="Map" id="datawrapper-chart-eQjOz" src="https://datawrapper.dwcdn.net/eQjOz/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
       $("#iframe-state").html(frame1);
     }else if( state_el == "Mn"){
       var frame1 =
-      '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="600" height="724"></iframe>';
+      '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="724"></iframe>';
       $("#iframe-state").html(frame1);
     }
 
@@ -878,19 +878,19 @@ function getCrntYear() {
     $("#iframe-state").html(frame1);
   } else if ( state_el == "Pb") {
     var frame1 =
-      '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/41N0A/" scrolling="no" frameborder="0" style="border: none;" width="600" height="707"></iframe>';
+      '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/41N0A/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="707"></iframe>';
     $("#iframe-state").html(frame1);
   } else if ( state_el == "Uk") {
     var frame1 =
-      '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/I19Oa/" scrolling="no" frameborder="0" style="border: none;" width="600" height="583"></iframe>';
+      '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/I19Oa/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
     $("#iframe-state").html(frame1);
   } else if (state_el == "Goa" ) {
     var frame1 =
-      '<iframe title="Goa Winners" aria-label="Map" id="datawrapper-chart-eQjOz" src="https://datawrapper.dwcdn.net/eQjOz/" scrolling="no" frameborder="0" style="border: none;" width="600" height="683"></iframe>';
+      '<iframe title="Goa Winners" aria-label="Map" id="datawrapper-chart-eQjOz" src="https://datawrapper.dwcdn.net/eQjOz/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
     $("#iframe-state").html(frame1);
   }else if( state_el == "Mn"){
     var frame1 =
-    '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="600" height="724"></iframe>';
+    '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="724"></iframe>';
     $("#iframe-state").html(frame1);
   }
   $("button.prev-year").removeClass("clicked");
