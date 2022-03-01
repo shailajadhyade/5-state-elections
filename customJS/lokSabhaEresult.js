@@ -140,7 +140,7 @@ function getLiveStreamURL() {
   }
   if (lang == "assam") {
     var url = stremingURLs[lang.toLowerCase()];
-    if (url) assamElection();
+    // if (url) assamElection();
     // document.getElementById("state-name").innerHTML = "ASSAM";
 
     $(".btn-list").hide();
@@ -153,7 +153,7 @@ function getLiveStreamURL() {
     return url;
   } else if (lang == "west-bengal") {
     var url = stremingURLs[lang.toLowerCase()];
-    if (url) westBengalElection();
+    // if (url) westBengalElection();
     // document.getElementById("state-name").innerHTML = "WEST BENGAL";
     $(".btn-list").hide();
     $(".btn-list1").show();
@@ -172,12 +172,12 @@ function getLiveStreamURL() {
       $("#tamil-vip").show();
       $("#state-name1").show();
 
-      tamilnaduElection();
+      // tamilnaduElection();
       return url;
     }
   } else if (lang == "kerala") {
     var url = stremingURLs[lang.toLowerCase()];
-    if (url) keralaElection();
+    // if (url) keralaElection();
     // document.getElementById("state-name").innerHTML = "KERALA";
     $("#other-states").show();
     $("#election-state").show();
@@ -851,15 +851,7 @@ function getPrevYear() {
       var frame1 =
         '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/I19Oa/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
       $("#iframe-state").html(frame1);
-    } else if (state_el == "Goa" ) {
-      var frame1 =
-        '<iframe title="Goa Winners" aria-label="Map" id="datawrapper-chart-eQjOz" src="https://datawrapper.dwcdn.net/eQjOz/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
-      $("#iframe-state").html(frame1);
-    }else if( state_el == "Mn"){
-      var frame1 =
-      '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="600" height="724"></iframe>';
-      $("#iframe-state").html(frame1);
-    }
+    } 
 
   $("button.crnt-year").removeClass("clicked");
   $("button.prev-year").addClass("clicked");
@@ -885,15 +877,7 @@ function getCrntYear() {
     var frame1 =
       '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/I19Oa/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
     $("#iframe-state").html(frame1);
-  } else if (state_el == "Goa" ) {
-    var frame1 =
-      '<iframe title="Goa Winners" aria-label="Map" id="datawrapper-chart-eQjOz" src="https://datawrapper.dwcdn.net/eQjOz/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
-    $("#iframe-state").html(frame1);
-  }else if( state_el == "Mn"){
-    var frame1 =
-    '<iframe title="Manipur Winners" aria-label="Map" id="datawrapper-chart-K88PS" src="https://datawrapper.dwcdn.net/K88PS/" scrolling="no" frameborder="0" style="border: none;" width="600" height="724"></iframe>';
-    $("#iframe-state").html(frame1);
-  }
+  } 
   $("button.prev-year").removeClass("clicked");
   $("button.crnt-year").addClass("clicked");
   $("#current-year").css("color", "white");
@@ -1905,56 +1889,10 @@ function getPhaseResult() {
   });
 }
 
-function assamElection() {
-  var img1 =
-    " <img src='images/states/assam.jpg' alt='' style='width:300; height: 250;' />";
-  $("#state-img").html(img1);
-  $("#BannerAdd")
-    .html(`<div id='div-gpt-ad-1619084890267-0' style='width: 728px; height: 90px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619084890267-0'); });
-  </script>
-</div>`);
-  $("#web-add")
-    .html(`<div id='div-gpt-ad-1619690557572-0' style='width: 300px; height: 250px;'>
-                    <script>
-                      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619690557572-0'); });
-                    </script>
-                  </div>`);
-  $("#web-add1")
-    .html(`<div id='div-gpt-ad-1619693831909-0' style='width: 300px; height: 250px;'>
-                  <script>
-                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619693831909-0'); });
-                  </script>
-                  </div>`);
-}
-function westBengalElection() {
-  var img1 =
-    "<img src='images/states/westbengal_300_250.jpg' alt='' style='width:300; height: 250;' />";
-  $("#state-img").html(img1);
-  $("#BannerAdd")
-    .html(`<div id='div-gpt-ad-1619084795127-0' style='width: 728px; height: 90px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619084795127-0'); });
-  </script>
-</div>`);
-  $("#web-add")
-    .html(`<div id='div-gpt-ad-1619693965889-0' style='width: 300px; height: 250px;'>
-                    <script>
-                      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619693965889-0'); });
-                    </script>
-                  </div>`);
-  $("#web-add1")
-    .html(`<div id='div-gpt-ad-1619693992826-0' style='width: 300px; height: 250px;'>
-                    <script>
-                      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619693992826-0'); });
-                    </script>
-                    </div>`);
-}
-function keralaElection() {
-  var img1 =
+function upElectionBanner() {
+  var upImg =
     "<img src='images/states/kerala.jpg' alt='hello' style='width:300; height: 250;' />";
-  $("#state-img").html(img1);
+  $("#state-img").html(upImg);
   $("#BannerAdd")
     .html(`<div id='div-gpt-ad-1619085131490-0' style='width: 728px; height: 90px;'>
                       <script>
@@ -1974,10 +1912,34 @@ function keralaElection() {
                     </script>
                   </div>`);
 }
-function tamilnaduElection() {
-  var img1 =
+
+function ukElectionBanner() {
+  var ukImg =
+    "<img src='images/states/kerala.jpg' alt='hello' style='width:300; height: 250;' />";
+  $("#state-img").html(ukImg);
+  $("#BannerAdd")
+    .html(`<div id='div-gpt-ad-1619085131490-0' style='width: 728px; height: 90px;'>
+                      <script>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619085131490-0'); });
+                      </script>
+                    </div>`);
+  $("#web-add")
+    .html(`<div id='div-gpt-ad-1619694076984-0' style='width: 300px; height: 250px;'>
+                        <script>
+                          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694076984-0'); });
+                        </script>
+                      </div>`);
+  $("#web-add1")
+    .html(`<div id='div-gpt-ad-1619694049650-0' style='width: 300px; height: 250px;'>
+                    <script>
+                      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694049650-0'); });
+                    </script>
+                  </div>`);
+}
+function pbElectionBanner() {
+  var pbimg =
     " <img src='images/states/tamilnadu.jpg' alt=''style='width:300; height: 250;' />";
-  $("#state-img").html(img1);
+  $("#state-img").html(pbimg);
   $("#BannerAdd")
     .html(`<div id='div-gpt-ad-1619085076269-0' style='width: 728px; height: 90px;'>
           <script>
@@ -2105,19 +2067,13 @@ function selectState(){
   if (state_el == "Up"){
     
     document.getElementById("state-name").innerHTML = "UTTARPRADESH";
-    
+    upElectionBanner();
   }else if( state_el == "Pb"){
-    
     document.getElementById("state-name").innerHTML = "PUNJAB";
+    pbElectionBanner()
   }else if( state_el == "Uk"){
-    
     document.getElementById("state-name").innerHTML = "UTTARAKHAND";
-  }else if( state_el == "Goa"){
-    
-    document.getElementById("state-name").innerHTML = "GOA";
-  }else if( state_el == "Mn"){
-    
-    document.getElementById("state-name").innerHTML = "MANIPUR";
+    ukElectionBanner();
   }
   getCrntYear();
   getDistrictResult();
