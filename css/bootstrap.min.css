@@ -2096,13 +2096,13 @@ th {
 .table {
 	width: 100%;
 	max-width: 100%;
-	margin-bottom: 20px
+	/* margin-bottom: 20px */
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
 	padding: 8px;
 	line-height: 1.42857143;
 	vertical-align: top;
-	border-top: 1px solid #ddd
+	/* border-top: 1px solid #ddd */
 }
 .table>thead>tr>th {
 	vertical-align: bottom;
@@ -2662,7 +2662,7 @@ select[multiple].input-lg, textarea.input-lg {
 	outline-offset: -2px
 }
 .btn.focus, .btn:focus, .btn:hover {
-	color: #333;
+	color: red;
 	text-decoration: none
 }
 .btn.active, .btn:active {
@@ -2863,38 +2863,38 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 .btn-danger {
 	color: #fff;
-	background-color: #d9534f;
-	border-color: #d43f3a
+	background-color: #f30e06;
+	border-color: #fa0e06
 }
 .btn-danger.focus, .btn-danger:focus {
 	color: #fff;
-	background-color: #c9302c;
-	border-color: #761c19
+	background-color: #fa0f07;
+	border-color: #ee0d05
 }
 .btn-danger:hover {
 	color: #fff;
-	background-color: #c9302c;
-	border-color: #ac2925
+	background-color: #fa0b02;
+	border-color: #f50b03
 }
 .btn-danger.active, .btn-danger:active, .open>.dropdown-toggle.btn-danger {
 	color: #fff;
-	background-color: #c9302c;
-	border-color: #ac2925
+	background-color: #f71008;
+	border-color: #f00c04
 }
 .btn-danger.active.focus, .btn-danger.active:focus, .btn-danger.active:hover, .btn-danger:active.focus, .btn-danger:active:focus, .btn-danger:active:hover, .open>.dropdown-toggle.btn-danger.focus, .open>.dropdown-toggle.btn-danger:focus, .open>.dropdown-toggle.btn-danger:hover {
 	color: #fff;
-	background-color: #ac2925;
-	border-color: #761c19
+	background-color: #fc0b02;
+	border-color: #f71008
 }
 .btn-danger.active, .btn-danger:active, .open>.dropdown-toggle.btn-danger {
 	background-image: none
 }
 .btn-danger.disabled.focus, .btn-danger.disabled:focus, .btn-danger.disabled:hover, .btn-danger[disabled].focus, .btn-danger[disabled]:focus, .btn-danger[disabled]:hover, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger:hover {
-	background-color: #d9534f;
-	border-color: #d43f3a
+	background-color: #f81109;
+	border-color: #e4110a
 }
 .btn-danger .badge {
-	color: #d9534f;
+	color: #f30e06;
 	background-color: #fff
 }
 .btn-link {
@@ -4221,10 +4221,10 @@ a.label:focus, a.label:hover {
 	background-color: #ec971f
 }
 .label-danger {
-	background-color: #d9534f
+	background-color: #f70e06
 }
 .label-danger[href]:focus, .label-danger[href]:hover {
-	background-color: #c9302c
+	background-color: #f5120a
 }
 .badge {
 	display: inline-block;
@@ -4394,7 +4394,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 	color: #66512c
 }
 .alert-danger {
-	color: #a94442;
+	color: #f80803;
 	background-color: #f2dede;
 	border-color: #ebccd1
 }
@@ -4402,7 +4402,7 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 	border-top-color: #e4b9c0
 }
 .alert-danger .alert-link {
-	color: #843534
+	color: #f50e0a
 }
 @-webkit-keyframes progress-bar-stripes {
 from {
@@ -4489,7 +4489,7 @@ background-position:0 0
 	background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent)
 }
 .progress-bar-danger {
-	background-color: #d9534f
+	background-color: #f80f07
 }
 .progress-striped .progress-bar-danger {
 	background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
@@ -5528,10 +5528,10 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', end
 	margin: 1px;
 	text-indent: -999px;
 	cursor: pointer;
-	background-color: #000\9;
+	background-color: #000;
 	background-color: rgba(0,0,0,0);
 	border: 1px solid #fff;
-	border-radius: 10px
+	border-radius: 10px;
 }
 .carousel-indicators .active {
 	width: 12px;

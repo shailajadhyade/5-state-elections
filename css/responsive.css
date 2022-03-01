@@ -6,10 +6,10 @@
 	font-size: inherit;
 }	
 .col-blg {
-	min-height: 402px;
+	min-height: 351px;
 }	
 .tally-scroll {
-	height: 330px;
+	height: 302px;
 }	
 /*
 .tally-scroll table {
@@ -19,12 +19,114 @@
 	
 }
 
+@media only screen and (max-width : 1824px) {
+	.tally-scroll{
+		height: 290px;
+	}
+	.img-blg img{
+		margin-left: -20%;
+	}
+	.main-adds {
+		/* margin-top: 7px ; */
+		/* margin-bottom: 0px ; */
+		margin: 7px 15% 0;
+	}
+}
+
+@media only screen and (max-width : 1624px) {
+	
+	.puducherry-name{
+		font-size: 20px;
+		padding: 6px 0 6px 2px;
+	}
+	.img-blg img{
+		margin-left: -28%;
+	}
+}
+@media only screen and (max-width : 1439px) {
+	.pers-blg-text h4 {
+		font-size: 15px !important;
+		margin-left: 30px !important;
+	}
+}
+@media only screen and (max-width : 1347px) {
+	.state-name{
+		font-size: 18px;
+		padding: 5px 0 5px 10px;
+	}
+	.puducherry-name{
+		font-size: 16px;
+		padding: 6px 0 6px 10px;
+	}
+	.tally-scroll{
+		height: 300px;
+	}
+	.election-state{
+		margin: 20px 10px;
+	}
+	.img-blg img{
+		margin-left: -40%;
+	}
+	.pers-blg-text h4 {
+		padding-left: 25px;
+	}
+}
+
 @media only screen and (max-width: 1199px){
+	.pers-blg-text h4 {
+		font-size: 15px !important;
+		margin-left: 30px !important;
+	}
+	.puducherry-name{
+		font-size: 14px;
+		padding: 7px 0 7px 2px;
+	}
+	.pers-blg-text h4 {
+		padding-left: 2px;
+	}
+	.img-blg img{
+		margin-left: -23%;
+	}
 	.scroll-blog {
+		/* height: 281px; */
 	overflow-x: auto;
+	}
+	.ap-constituency{
+		overflow: hidden;
+	}
+	.constituency-scroll{
+		height: 500px;
+	}
+	.tally-scroll{
+		height: 315px;
+	}
+	#westBengal{
+		margin-left: 12px !important;
+	}
+	#tamilnadu{
+		margin-left:-12px !important;
+	}
+	.lead-win{
+		padding-left: 0px;
+	}
+}
+@media only screen and (max-width: 1040px){
+	.pers-blg-text h4 {
+		font-size: 14px !important;
+		margin-left: 30px !important;
 	}
 }
 @media only screen and (max-width: 1024px){
+	.pers-blg-text h4 {
+		font-size: 14px !important;
+		margin-left: 30px !important;
+	}
+	.main-adds{
+		margin: 7px 5% 0;
+	}
+	.img-blg img{
+		margin-left: -27%;
+	}
 	#tally_lok_sabha {
 		top: 0%!important;
 	}
@@ -103,10 +205,10 @@
 /*--------*/
 	
 .col-blg {
-    min-height: 240px;
+    min-height: 342px;
 }
 .tally-scroll {
-    height: 150px;
+    height: 315px;
 }
 .totel-target-info {
 	top: 20%;
@@ -124,17 +226,77 @@
 }	
 	
 }
-@media only screen and (max-width : 1023px) {
+@media only screen and (max-width : 1021px) {
+	.pers-blg-text h4 {
+		font-size: 14px !important;
+		margin-left: 28px !important;
+	}
+	.img-blg img{
+		margin-left: -28%;
+	}
 	.side-quik-links {
 		display: none;
 	}
-
+	#img1{
+		width:250px;
+  }
+  .year{
+    /* background: #00011E; */
+    /* color: white; */
+    border: none;
+    outline: none;
+    padding: 10px 28px;
+    font-weight: 700;	
+  }
+  
 }
 
 @media only screen and (max-width : 991px) {
+	.state-name{
+		font-size: 22px;
+		padding: 5px 0 5px 15px;
+  }
+  .add-space-2{
+    margin-left: 90px;
+    height: 270px;
+    margin-top: 10px;
+    text-align: center;
+  }
+	.puducherry-name{
+		font-size: 22px;
+		padding: 5px 0 5px 15px;
+	}
+  #tamilnadu{
+		margin-left: 1px !important;
+	}
+	#westBengal{
+		margin-left: 0px !important;
+	}
+	.img-blg img{
+		margin-left: -20%;
+	}
+	.election-results .iframe-embed{
+		border-right: none;
+	}
+	.tally-d{
+		margin-left: 0;
+	}
+	#westBengal{
+		margin-left:0px !important;
+	}
 	.news-section {
     background-color: transparent;
 	}
+	#img1{
+		width:300px;
+	}
+ 
+	.news-section1 {
+		background-color: #052e43 ;
+		height: 85px;
+	
+	}
+	
 	#tally_lok_sabha {
 		top: 27% !important;
 	}
@@ -142,7 +304,7 @@
     top: 13%;
 	}
 	.col-blg {
-    min-height: 350px;
+    min-height: 342px;
 }
 	.col-last-child-resp {
 		margin-right: 0px;
@@ -161,12 +323,41 @@
 	min-height: auto !important;
 }
 .tally-scroll {
-    height: 283px;
+    height: 290px;
 }
+}
+@media only screen and (max-width : 891px) {
+	.logo-div {
+		display: block;
+		margin: 30px 0;
+	}
+	.main-adds {
+		/* padding-top: 50px ; */
+		margin-left: 0;
+	}
+	.img-blg img{
+		margin-left: -24%;
+	}
+}
+@media only screen and (min-width: 768px){
+	/* .main-adds {
+		/* margin-top: 7px ; */
+		/* margin-bottom: 0px ; */
+		/* margin: 7px 0 0;
+	} */
+	/* .img-blg img{
+		margin-left: -15%;
+	} */
 }
 @media only screen and (max-width: 768px){
+	.img-blg img{
+		margin-left: -27%;
+	}
 	.live-news-add img {
      margin-top: 0;
+	}
+	.main-adds{
+		margin-left:0;
 	}
 
 .center-line-1 {
@@ -180,8 +371,15 @@
 */
 }
 @media only screen and (max-width: 767px){
+	.pers-blg-text h4 {
+		font-size: 16px !important;
+		margin-left: 20px !important;
+   }
+  .table-responsive {
+   margin-bottom: 0px !important;
+  }
 	.col-blg {
-    min-height: 355px;
+    min-height: 342px;
 	}
 		
 	.totel-target-info {
@@ -224,6 +422,9 @@
 .info-graph-bot {
     min-height: 351px;
 }	
+.img-blg img{
+	margin-left: -28%;
+}
 	
 }
 @media only screen and (max-width: 539px){
@@ -236,6 +437,10 @@
 	}
 }
 @media only screen and (max-width: 595px){
+	.pers-blg-text h4 {
+		 font-size: 14px !important;
+		 margin-left: 20px !important;
+	}
 	.state-wise-map-blg {
 	max-width: 100%;
 	width: 100%;
@@ -245,6 +450,14 @@
 	.state-wise-vip-blg {
 	max-width: 100%;
 	width: 100%;
+}
+.year{
+  /* background: #00011E;
+  color: white; */
+  border: none;
+  outline: none;
+  padding: 10px 26px;
+  font-weight: 700;	
 }
 		
 }
