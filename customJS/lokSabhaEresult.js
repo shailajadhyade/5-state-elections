@@ -903,29 +903,29 @@ function getCrntYear() {
 }
 function westBengal(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "<tr><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[3] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;color:white'>OTH</th></tr>";
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;color:white'>OTH</th></tr>";
   CombineTable = t + "<tr>" + CombineTable + "</tr>";
   $("#Up_data").html(CombineTable);
 }
 function assam(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata2' style='background: #ba3b0f;font-weight: 700;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "<tr><th class='tdata2' style='background: #B80403;font-weight: 700;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[3] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;color:white'>OTH</th></tr>";
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;color:white'>OTH</th></tr>";
   CombineTable =
     t +
     "<tr>" +
@@ -939,15 +939,15 @@ function assam(CombineTable, com2, theadh) {
 }
 function puducherry(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "<tr><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[3] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;color:white'>OTH</th></tr><tr>";
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;color:white'>OTH</th></tr><tr>";
   CombineTable =
     t +
     "<tr>" +
@@ -961,15 +961,15 @@ function puducherry(CombineTable, com2, theadh) {
 }
 function tamilnadu(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata1' style='background: #ba3b0f;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "<tr><th class='tdata1' style='background: #B80403;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</div></th><th class='tdata1' style='background: #ba3b0f;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata1' style='background: #B80403;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</div></th><th class='tdata1' style='background: #ba3b0f;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata1' style='background: #B80403;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[3] +
-    "</div></th><th class='tdata1' style='background: #ba3b0f;font-weight: 700;' width='95'>" +
+    "</div></th><th class='tdata1' style='background: #B80403;font-weight: 700;' width='95'>" +
     theadh[3];
   CombineTable =
     t +
@@ -984,13 +984,13 @@ function tamilnadu(CombineTable, com2, theadh) {
 }
 function kerala(CombineTable, com2, theadh) {
   var t =
-    "<tr><th class='tdata2' style='background: #ba3b0f;font-weight: 700;width: 95px'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "<tr><th class='tdata2' style='background: #B80403;font-weight: 700;width: 95px'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[0] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[1] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[2] +
-    "</div></th><th class='tdata2' style='background: #ba3b0f;font-weight: 700;color:white'>OTH</th> </tr>";
+    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;color:white'>OTH</th> </tr>";
   CombineTable =
     t +
     "<tr>" +
