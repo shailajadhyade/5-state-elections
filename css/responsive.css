@@ -40,8 +40,17 @@
 		width: 78px !important;
 	}
 }
+@media only screen and (max-width : 1740px) {
+	.LW-width{
+		width: 73px !important;
+	}
+}
+@media only screen and (max-width : 1660px) {
+	.LW-width{
+		width: 50px !important;
+	}
+}
 @media only screen and (max-width : 1624px) {
-	
 	.puducherry-name{
 		font-size: 20px;
 		padding: 6px 0 6px 2px;

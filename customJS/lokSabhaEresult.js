@@ -815,10 +815,10 @@ function electionResults() {
         }
       }
       if (arr[j] == "UP") {
-        $("#UpTotal").html(westTotal);
+        // $("#UpTotal").html(westTotal);
         westBengal(CombineTable, com2, theadh);
       } else if (arr[j] == "PB") {
-        $("#PbTotal").html(westTotal);
+        // $("#PbTotal").html(westTotal);
         assam(CombineTable, com2, theadh);
       } else if (arr[j] == "UK") {
         // $("#UkTotal").html(westTotal);
@@ -2082,20 +2082,20 @@ $(document).ready(function () {
   electionResults();
   getLiveStateNews();
   bannerAdd();
-  // setInterval(() => {
-  //   electionResults();
-  // }, 30000);
+  setInterval(() => {
+    electionResults();
+  }, 30000);
   getDistrictResult();
   selectState();
   // getCrntYear();
 
-  // setInterval(() => {
-  //   if ($("button.prev-year").hasClass("clicked")) {
-  //     getPrevYear();
-  //   } else if ($("button.crnt-year").hasClass("clicked")) {
-  //     getCrntYear();
-  //   }
-  // }, 30000);
+  setInterval(() => {
+    if ($("button.prev-year").hasClass("clicked")) {
+      getPrevYear();
+    } else if ($("button.crnt-year").hasClass("clicked")) {
+      getCrntYear();
+    }
+  }, 30000);
 
   setInterval(() => {
     if ($("button.dist").hasClass("clicked")) {
