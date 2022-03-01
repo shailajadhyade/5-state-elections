@@ -23,6 +23,40 @@
 } */
 /* tr:nth-child(even) {background-color: #ddd;}
 tr:nth-child(odd) {background-color: #eee;} */
+@media only screen and (max-width: 500px) {
+	#datawrapper-chart-I19Oa{
+		height:430px;
+	  }
+	  #datawrapper-chart-41N0A{
+		  height: 503px;
+	  }
+	#datawrapper-chart-Z30ot {
+	  height: 480px;
+	}
+  }
+
+  @media only screen and (min-width: 651px) {
+	#datawrapper-chart-I19Oa{
+		height:690px;
+	  }
+	  #datawrapper-chart-41N0A{
+		  height: 750px;
+	  }
+	#datawrapper-chart-Z30ot {
+	  height: 695px;
+	}
+  }
+  @media only screen and (min-width: 1100px) {
+	#datawrapper-chart-I19Oa{
+	  height: 700px;
+	}
+	#datawrapper-chart-41N0A{
+		height: 750px;
+	}
+	#datawrapper-chart-Z30ot{
+		height: 683px;
+	}
+  }
 .td-border tr th {
 	font-weight: 900px !important;
 } 
