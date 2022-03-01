@@ -289,8 +289,6 @@ function getLiveStateNews() {
 
 // LiveDebate function
 
-// pudhucherry vip Candidates
-
 // state wise Vip candidates
 function getVipResult() {
   $('#resultName').html('Important Personalities 2022');
@@ -794,7 +792,7 @@ function electionResults() {
   var url = "./json/kerala.json";
   getJSON(url, function (response) {
     // debugger;
-    var arr = [36, 4, 31, 18, 27];
+    var arr = ["UP", "PB", "UK", "GA", "MNP"];
     var totaltally = [292, 126, 234, 140, 30];
     for (var j = 0; j < arr.length; j++) {
       var CombineTable = "";
@@ -803,33 +801,33 @@ function electionResults() {
       var i;
 
       for (i = 0; i < response.totalresults.length; i++) {
-        if (response.totalresults[i]) {
+        if (response.totalresults[i].state_id == arr[j]) {
           theadh.push(response.totalresults[i].party_name);
           var trf = "<td>" + response.totalresults[i].lead + "</td>";
           CombineTable = CombineTable + trf;
-          var trf2 =
-            "<td style='color:green'>" + response.totalresults[i].won + "</td>";
-          com2 = com2 + trf2;
+          // var trf2 =
+          //   "<td style='color:green'>" + response.totalresults[i].won + "</td>";
+          // com2 = com2 + trf2;
         } else if (response.totalresults[i].total_seats == totaltally[j]) {
           var countTally = response.totalresults[i].total_count;
           var totalTally = response.totalresults[i].total_seats;
           var westTotal = countTally + "/" + totalTally;
         }
       }
-      if (arr[j] == 36) {
+      if (arr[j] == "UP") {
         $("#UpTotal").html(westTotal);
         westBengal(CombineTable, com2, theadh);
-      } else if (arr[j] == 4) {
+      } else if (arr[j] == "PB") {
         $("#PbTotal").html(westTotal);
         assam(CombineTable, com2, theadh);
-      } else if (arr[j] == 27) {
-        $("#UkTotal").html(westTotal);
+      } else if (arr[j] == "UK") {
+        // $("#UkTotal").html(westTotal);
         puducherry(CombineTable, com2, theadh);
-      } else if (arr[j] == 31) {
-        $("#tamilTotal").html(westTotal);
+      } else if (arr[j] == "GA") {
+        // $("#tamilTotal").html(westTotal);
         tamilnadu(CombineTable, com2, theadh);
-      } else if (arr[j] == 18) {
-        $("#keralaTotal").html(westTotal);
+      } else if (arr[j] == "MNP") {
+        // $("#keralaTotal").html(westTotal);
         kerala(CombineTable, com2, theadh);
       }
     }
@@ -932,7 +930,7 @@ function puducherry(CombineTable, com2, theadh) {
     theadh[2] +
     "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[3] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;color:white'>OTH</th></tr><tr>";
+    "</div></th></tr><tr>";
   CombineTable =
     t +
     "<tr>" +
@@ -955,7 +953,7 @@ function tamilnadu(CombineTable, com2, theadh) {
     "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
     theadh[3] +
     "</div></th><th class='tdata1' style='background: #B80403;font-weight: 700;' width='95'>" +
-    theadh[3];
+    theadh[4];
   CombineTable =
     t +
     "<tr>" +
@@ -2091,13 +2089,13 @@ $(document).ready(function () {
   selectState();
   // getCrntYear();
 
-  setInterval(() => {
-    if ($("button.prev-year").hasClass("clicked")) {
-      getPrevYear();
-    } else if ($("button.crnt-year").hasClass("clicked")) {
-      getCrntYear();
-    }
-  }, 30000);
+  // setInterval(() => {
+  //   if ($("button.prev-year").hasClass("clicked")) {
+  //     getPrevYear();
+  //   } else if ($("button.crnt-year").hasClass("clicked")) {
+  //     getCrntYear();
+  //   }
+  // }, 30000);
 
   setInterval(() => {
     if ($("button.dist").hasClass("clicked")) {
