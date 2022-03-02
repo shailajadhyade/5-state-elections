@@ -699,89 +699,29 @@ function bannerAdd() {
 }
 
 var test = getLiveStreamURL();
-function assamHead() {
-  var parties = {
-    a: "BJP+",
-    b: "INC+",
-    c: "AJP",
-    d: "OTHERS",
-  };
-  var thead =
-    "<th class='assam1'>" +
-    parties.a +
-    "</th><th class='assam2'>" +
-    parties.b +
-    "</th><th class='assam3'>" +
-    parties.c +
-    "</th><th class='assam4'>" +
-    parties.d +
-    "</th></tr>";
-  return thead;
+
+// (above table) five state tally
+
+function fiveStateTally(CombineTable, theadh, state) {
+  var t="<tr>";
+  for(i=0;i<theadh.length;i++){
+    theadh[i]= theadh[i]==="OTHERS"? "OTH": theadh[i];
+    t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +theadh[i] +"</div></th>";
+  }
+  CombineTable = t + "<tr>" + CombineTable + "</tr>";
+  if(state==="UP"){
+    $("#Up_data").html(CombineTable);
+  }else if(state === "PB"){
+    $("#Pb_data").html(CombineTable);
+  }else if(state === "UK"){
+    $("#Uk_data").html(CombineTable);
+  }else if(state==="MNP"){
+    $("#Mnr_data").html(CombineTable);
+  }else if(state === "GA"){
+    $("#Ga_data").html(CombineTable);
+  }
 }
-function westHead() {
-  var parties = {
-    a: "AITC",
-    b: "BJP",
-    c: "LEFT+",
-    d: "OTHERS",
-  };
-  var thead =
-    "<th class='wb1'>" +
-    parties.a +
-    "</th><th class='wb2'>" +
-    parties.b +
-    "</th><th class='wb3'>" +
-    parties.c +
-    "</th><th class='assam4'>" +
-    parties.d +
-    "</th></tr>";
-  return thead;
-}
-function tamilHead() {
-  var parties = {
-    a: "ADMK+",
-    b: "DMK+",
-    c: "MNM+",
-    d: "NTK",
-    e: "AMMK+",
-    f: "OTHERS",
-  };
-  var thead =
-    "<th class='tamil1'>" +
-    parties.a +
-    "</th><th class='tamil2'>" +
-    parties.b +
-    "</th><th class='tamil3'>" +
-    parties.c +
-    "</th><th class='tamil4'>" +
-    parties.d +
-    "</th>" +
-    "<th class='tamil5'>" +
-    parties.e +
-    "</th><th class='tamil6'>" +
-    parties.f +
-    "</th></tr>";
-  return thead;
-}
-function keralaHead() {
-  var parties = {
-    a: "LDF",
-    b: "UDF",
-    c: "NDA",
-    d: "OTH",
-  };
-  var thead =
-    "<th class='class1'>" +
-    parties.a +
-    "</th><th class='class2'>" +
-    parties.b +
-    "</th><th class='class3'>" +
-    parties.c +
-    "</th><th class='class4'>" +
-    parties.d +
-    "</th></tr>";
-  return thead;
-}
+
 function electionResults() {
   console.log("hakhkd");
   // var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5Results;
@@ -812,10 +752,10 @@ function electionResults() {
       }
       if (arr[j] == "UP") {
         $("#UpTotal").html(westTotal);
-        westBengal(CombineTable, com2, theadh);
+        fiveStateTally(CombineTable, theadh, "UP");
       } else if (arr[j] == "PB") {
         $("#PbTotal").html(westTotal);
-        assam(CombineTable, com2, theadh);
+        fiveStateTally(CombineTable, theadh, "PB");
       } else if (arr[j] == "UK") {
         $("#UkTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh,"UK");
@@ -829,6 +769,8 @@ function electionResults() {
     }
   });
 }
+
+
 
 function getPrevYear() {
   // $("#previous-year").click(function(){
@@ -880,134 +822,46 @@ function getCrntYear() {
   $("#previous-year").css("background-color", "#949494");
   // });
 }
-function fiveStateTally(CombineTable, theadh, state) {
-  var t="<tr>";
-  for(i=0;i<theadh.length;i++){
-    if(theadh[i]==="OTHERS"){
-      t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>OTH</div></th>";
-    }else {
-      t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +theadh[i] +"</div></th>";
-    }
+
+
+// state wise District result results display (below tables)
+function partiesDisplay(parties){
+  for(var key in parties){
+    console.log(parties,"uphead parties")
+   var thead = thead+"<th class='wb1'>" +parties[key] +"</th>";
   }
-  CombineTable = t + "<tr>" + CombineTable + "</tr>";
-  if(state==="UP"){
-    $("#Up_data").html(CombineTable);
-  }else if(state === "PB"){
-    $("#Pb_data").html(CombineTable);
-  }else if(state === "UK"){
-    $("#Uk_data").html(CombineTable);
-  }else if(state==="MNP"){
-    $("#Mnr_data").html(CombineTable);
-  }else if(state === "GA"){
-    $("#Ga_data").html(CombineTable);
-  }
+  return thead;
+}
+function upHead() {
+  var parties = {
+    a: "BJP+",
+    b: "SP+",
+    c: "BSP",
+    d: "INC",
+    e: "OTHERS"
+  };
+  return partiesDisplay(parties);
+}
+function pbHead(){
+  var parties = {
+    a: "INC",
+    b: "AAP",
+    c: "SAD+",
+    d: "BJP+",
+    e: "OTHERS"
+  };
+  return partiesDisplay(parties);
+}
+function ukHead(){
+  var parties = {
+    a: "BJP",
+    b: "INC",
+    c: "AAP",
+    d: "OTHERS"
+  };
+  return partiesDisplay(parties);
 }
 
-function westBengal(CombineTable, com2, theadh) {
-  var t =
-    "<tr><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[0] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[1] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[2] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[3] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;color:white'>OTH</th></tr>";
-  CombineTable = t + "<tr>" + CombineTable + "</tr>";
-  $("#Up_data").html(CombineTable);
-}
-function assam(CombineTable, com2, theadh) {
-  var t =
-    "<tr><th class='tdata2' style='background: #B80403;font-weight: 700;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[0] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[1] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[2] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[3] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;color:white'>OTH</th></tr>";
-  CombineTable =
-    t +
-    "<tr>" +
-    theadh +
-    "</tr><tr>" +
-    CombineTable +
-    // "</tr><tr>" +
-    // com2 +
-    "</tr>";
-  $("#Pb_data").html(CombineTable);
-}
-function puducherry(CombineTable, com2, theadh) {
-  var t =
-    "<tr><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[0] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[1] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[2] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[3] +
-    "</div></th></tr><tr>";
-  CombineTable =
-    t +
-    "<tr>" +
-    theadh +
-    "</tr><tr>" +
-    CombineTable +
-    // "</tr><tr>" +
-    // com2 +
-    "</tr>";
-  $("#Puducherry_data").html(CombineTable);
-}
-function tamilnadu(CombineTable, com2, theadh) {
-  var t =
-    "<tr><th class='tdata1' style='background: #B80403;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[0] +
-    "</div></th><th class='tdata1' style='background: #B80403;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[1] +
-    "</div></th><th class='tdata1' style='background: #B80403;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[2] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[3] +
-    "</div></th><th class='tdata1' style='background: #B80403;font-weight: 700;' width='95'>" +
-    theadh[4];
-  CombineTable =
-    t +
-    "<tr>" +
-    theadh +
-    "</tr><tr>" +
-    CombineTable +
-    // "</tr><tr>" +
-    // com2 +
-    "</tr>";
-  $("#tamil_nadu").html(CombineTable);
-}
-function kerala(CombineTable, com2, theadh) {
-  var t =
-    "<tr><th class='tdata2' style='background: #B80403;font-weight: 700;width: 95px'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[0] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;' width='95'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[1] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[2] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +
-    theadh[3] +
-    "</div></th><th class='tdata2' style='background: #B80403;font-weight: 700;color:white'>OTH</th> </tr>";
-  CombineTable =
-    t +
-    "<tr>" +
-    theadh +
-    "</tr><tr>" +
-    CombineTable +
-    // "</tr><tr>" +
-    // com2 +
-    "</tr>";
-  $("#kerala_data").html(CombineTable);
-}
-
-// state wise District result
 function getDistrictResult() {
   $('#resultName').html('District wise Results 2022');
   $(".col-bg1").css("background-color", "#fff");
@@ -1021,264 +875,74 @@ function getDistrictResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    url = "./json/t.json";
+    url = "./json/up.json";
+    $.getJSON(url, function (successdata) {
+      CombinedHTMLTable = "";
+      var thead = "";
+      thead = "<tr>" + "<th class='table-h'></th>" + upHead()+"</tr>";
+      CombinedHTMLTable = CombinedHTMLTable + thead;
+      var tr = "";
+      var distresults = successdata.results;
+      for (var i = 0; i <= distresults.length - 1; i++) {
+        tr = "<tr><td class='dist1' colspan=5> " +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></td></tr>" +
+          "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
+          "<td class='edhyna'>" +distresults[i].bjp_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].sp_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].bsp_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].inc_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].oth_lead +"</td></tr>" ;
+        CombinedHTMLTable = CombinedHTMLTable + tr;
+      }
+      $("#constituency_tbody").html(CombinedHTMLTable);
+    });
   }
   else if(state == "Pb"){
-    url = "./json/t.json";
+    url = "./json/pb.json";
+    $.getJSON(url, function (successdata) {
+      CombinedHTMLTable = "";
+      var thead = "";
+      thead = "<tr>" + "<th class='table-h'></th>" + pbHead();
+      CombinedHTMLTable = CombinedHTMLTable + thead;
+      var tr = "";
+      var distresults = successdata.results;
+      for (var i = 0; i <= distresults.length - 1; i++) {
+        tr = "<tr><td class='dist1' colspan=5> " +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></td></tr>" +
+          "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
+          "<td class='edhyna'>" +distresults[i].inc_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].aap_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].sad_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].bjp_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].oth_lead +"</td></tr>" ;
+        CombinedHTMLTable = CombinedHTMLTable + tr;
+      }
+      $("#constituency_tbody").html(CombinedHTMLTable);
+    });
   }else if(state == "Uk"){
-    url = "./json/t.json";
-  }else if(state == "Goa"){
-    url = "./json/t.json";
-  }else if(state == "Mn"){
-    url = "./json/t.json";
+    url = "./json/uk.json";
+    $.getJSON(url, function (successdata) {
+      CombinedHTMLTable = "";
+      var thead = "";
+      thead = "<tr>" + "<th class='table-h'></th>" + ukHead();
+      CombinedHTMLTable = CombinedHTMLTable + thead;
+      var tr = "";
+      var distresults = successdata.results;
+      for (var i = 0; i <= distresults.length - 1; i++) {
+        tr = "<tr><td class='dist1' colspan=5> " +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></td></tr>" +
+          "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
+          "<td class='edhyna'>" +distresults[i].bjp_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].inc_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].aap_lead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].oth_lead +"</td></tr>" ;
+        CombinedHTMLTable = CombinedHTMLTable + tr;
+      }
+      $("#constituency_tbody").html(CombinedHTMLTable);
+    });
   }
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
   }
-  // if (
-  //   test ==
-  //   "https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8"
-  // ) {
-  //   url =
-  //     appData.apiConfig.baseURL + appData.apiConfig.suffixes.kerala.distResult;
-  // } else if (
-  //   test ==
-  //   "https://dfae28bzu51al.cloudfront.net/out/v1/ee7ba7ef70fc4005a3992a2c0e8336aa/ETVB_CF_TN_NewsTime.m3u8"
-  // ) {
-  //   url =
-  //     appData.apiConfig.baseURL +
-  //     appData.apiConfig.suffixes.tamilnadu.distResult;
-  // } else if (
-  //   test ==
-  //   "https://etvbharatlive8.akamaized.net/hls/live/710674/assam/index.m3u8"
-  // ) {
-  //   url =
-  //     appData.apiConfig.baseURL + appData.apiConfig.suffixes.assam.distResult;
-  // } else if (
-  //   test ==
-  //   "https://etvbharatlive9.akamaized.net/hls/live/710675/westBengal/index.m3u8"
-  // ) {
-  //   url =
-  //     appData.apiConfig.baseURL +
-  //     appData.apiConfig.suffixes.westBengal.distResult;
-  // } else {
-  //   url = null;
-  // }
-  $.getJSON(url, function (successdata) {
-    // 6
-
-    if (
-      url ==
-      appData.apiConfig.baseURL + appData.apiConfig.suffixes.kerala.distResult
-    ) {
-      CombinedHTMLTable = "";
-      var thead = "";
-      thead = "<tr>" + "<th class='table-h'></th>" + keralaHead();
-      CombinedHTMLTable = CombinedHTMLTable + thead;
-      var tr = "";
-      var distresults = successdata.results;
-      for (var i = 0; i <= distresults.length - 1; i++) {
-        tr =
-          "<tr><td class='dist1' colspan=5> " +
-          distresults[i].dist_name +
-          "<span>&nbsp;&nbsp;(" +
-          distresults[i].count_seats +
-          "/" +
-          distresults[i].total_seats +
-          ")</span></td></tr>" +
-          "<tr><td class='lead1'> Lead </td>" +
-          "<td class='edhyna'>" +
-          distresults[i].ldf_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].udf_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].nda_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].oth_lead +
-          "</td></tr>" +
-          "<tr style='color: #05601C;'class='lead1'><td>Won</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].ldf_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].udf_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].nda_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].oth_won +
-          "</td></tr>";
-        CombinedHTMLTable = CombinedHTMLTable + tr;
-      }
-      $("#constituency_tbody").html(CombinedHTMLTable);
-    } else if (
-      url ==
-      appData.apiConfig.baseURL +
-      appData.apiConfig.suffixes.tamilnadu.distResult
-    ) {
-      CombinedHTMLTable = "";
-      var thead = "";
-      thead = "<tr>" + "<th class='table-h'></th>" + tamilHead();
-      CombinedHTMLTable = CombinedHTMLTable + thead;
-      var tr = "";
-      var distresults = successdata.results;
-      for (var i = 0; i <= distresults.length - 1; i++) {
-        tr =
-          "<tr><td class='dist1' colspan=7> " +
-          distresults[i].dist_name +
-          "<span>&nbsp;&nbsp;(" +
-          distresults[i].count_seats +
-          "/" +
-          distresults[i].total_seats +
-          ")</span></td></tr>" +
-          "<tr><td class='lead1'> Lead </td>" +
-          "<td class='edhyna'>" +
-          distresults[i].admk_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].dmk_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].mnm_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].ntk_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].ammk_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].oth_lead +
-          "</td></tr>" +
-          "<tr style='color: #05601C;'class='lead1'><td>Won</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].admk_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].dmk_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].mnm_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].ntk_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].ammk_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].oth_won +
-          "</td></tr>";
-        CombinedHTMLTable = CombinedHTMLTable + tr;
-      }
-      $("#constituency_tbody").html(CombinedHTMLTable);
-    } else if (
-
-      url ==
-      appData.apiConfig.baseURL + appData.apiConfig.suffixes.assam.distResult
-    ) {
-      CombinedHTMLTable = "";
-      var thead = "";
-      thead = "<tr>" + "<th class='table-h'></th>" + assamHead();
-      CombinedHTMLTable = CombinedHTMLTable + thead;
-      var tr = "";
-      var distresults = successdata.results;
-      for (var i = 0; i <= distresults.length - 1; i++) {
-        tr =
-          "<tr><td class='dist1' colspan=5> " +
-          distresults[i].dist_name +
-          "<span>&nbsp;&nbsp;(" +
-          distresults[i].count_seats +
-          "/" +
-          distresults[i].total_seats +
-          ")</span></td></tr>" +
-          "<tr><td class='lead1'> Lead </td>" +
-          "<td class='edhyna'>" +
-          distresults[i].bjp_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].inc_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].ajp_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].oth_lead +
-          "</td></tr>" +
-          "<tr style='color: #05601C;'class='lead1'><td>Won</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].bjp_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].inc_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].ajp_won +
-          "</td>" +
-          "<td style='color: #05601C;' class='edhyna'>" +
-          distresults[i].oth_won +
-          "</td></tr>";
-        CombinedHTMLTable = CombinedHTMLTable + tr;
-      }
-      $("#constituency_tbody").html(CombinedHTMLTable);
-    } else if (
-      url == "./json/t.json"
-      // appData.apiConfig.baseURL +
-      // appData.apiConfig.suffixes.westBengal.distResult
-    ) {
-      // debugger
-      CombinedHTMLTable = "";
-      var thead = "";
-      thead = "<tr>" + "<th class='table-h'></th>" + westHead();
-      CombinedHTMLTable = CombinedHTMLTable + thead;
-      var tr = "";
-      var distresults = successdata.results;
-      for (var i = 0; i <= distresults.length - 1; i++) {
-        tr =
-          "<tr><td class='dist1' colspan=5> " +
-          distresults[i].dist_name +
-          "<span>&nbsp;&nbsp;(" +
-          distresults[i].count_seats +
-          "/" +
-          distresults[i].total_seats +
-          ")</span></td></tr>" +
-          "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna'>" +
-          distresults[i].aitc_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].bjp_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].left_lead +
-          "</td>" +
-          "<td class='edhyna'>" +
-          distresults[i].oth_lead +
-          "</td></tr>" ;
-        // "<tr style='color: #05601C;'class='lead1'><td>Won</td>" +
-        // "<td style='color: #05601C;' class='edhyna'>" +
-        // distresults[i].aitc_won +
-        // "</td>" +
-        // "<td style='color: #05601C;' class='edhyna'>" +
-        // distresults[i].bjp_won +
-        // "</td>" +
-        // "<td style='color: #05601C;' class='edhyna'>" +
-        // distresults[i].left_won +
-        // "</td>" +
-        // "<td style='color: #05601C;' class='edhyna'>" +
-        // distresults[i].oth_won +
-        // "</td></tr>";
-        CombinedHTMLTable = CombinedHTMLTable + tr;
-      }
-      $("#constituency_tbody").html(CombinedHTMLTable);
-    }
-    searchfun();
-  });
 }
+
 function searchfun() {
   $("#tdSearch1").on("keyup", function () {
     var input, filter, table, tr, td, i, txtValue;
@@ -1442,16 +1106,13 @@ function getConstResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    url = "";
+    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.kerala.constwise;
+    url = "http://65.0.40.45/web_api/website/westbengal_2021/statewise_const_tally.php";
   }
   else if(state == "Pb"){
-    url = "";
+    url = "http://65.0.40.45/web_api/website/kerala_2021/statewise_const_tally.php";
   }else if(state == "Uk"){
-    url = "";
-  }else if(state == "Goa"){
-    url = "";
-  }else if(state == "Mn"){
-    url = "";
+    url = "http://65.0.40.45/web_api/website/tamilnadu_2021/statewise_const_tally.php";
   }
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
@@ -1496,83 +1157,24 @@ function getConstResult() {
           </tr>`;
     CombinedHTMLTable = CombinedHTMLTable + thead;
     for (var j = 0; j <= successdata.results.length - 1; j++) {
+      tr = "<tr>" +
+        "<td style='padding-left: 15px;text-align: initial;'>" + successdata.results[j]["const_name"] + "</td>" +
+        "<td style='padding-left: 15px;text-align: initial;'>" + successdata.results[j]["candidate_name"] + "</td>" +
+        "<td>" + successdata.results[j]["party_name"] + "</td>";
       if (successdata.results[j]["status"].toLowerCase() == "lead") {
-        tr =
-          "<tr>" +
-          "<td style='padding-left: 15px;text-align: initial;'>" +
-          successdata.results[j]["const_name"] +
-          "</td>" +
-          "<td style='padding-left: 15px;text-align: initial;'>" +
-          successdata.results[j]["candidate_name"] +
-          "</td>" +
-          "<td>" +
-          successdata.results[j]["party_name"] +
-          "</td>" +
-          "<td class='leading-blog sorting_1'>" +
-          "<p>" +
-          successdata.results[j]["status"] +
-          "</p>" +
-          "</td>" +
+        tr = tr + "<td class='leading-blog sorting_1'>" + "<p>" + successdata.results[j]["status"] + "</p>" + "</td>" +
           "</tr>";
-        CombinedHTMLTable = CombinedHTMLTable + tr;
       } else if (successdata.results[j]["status"].toLowerCase() == "won") {
-        tr =
-          "<tr>" +
-          "<td style='padding-left: 15px;text-align: initial;'>" +
-          successdata.results[j]["const_name"] +
-          "</td>" +
-          "<td style='padding-left: 15px;text-align: initial;'>" +
-          successdata.results[j]["candidate_name"] +
-          "</td>" +
-          "<td>" +
-          successdata.results[j]["party_name"] +
-          "</td>" +
-          "<td class='won-blog sorting_1'>" +
-          "<p>" +
-          successdata.results[j]["status"] +
-          "</p>" +
-          "</td>" +
+        tr = tr + "<td class='won-blog sorting_1'>" + "<p>" + successdata.results[j]["status"] + "</p>" + "</td>" +
           "</tr>";
-        CombinedHTMLTable = CombinedHTMLTable + tr;
       } else if (successdata.results[j]["status"].toLowerCase() == "lost") {
-        tr =
-          "<tr>" +
-          "<td style='padding-left: 15px;text-align: initial;'>" +
-          successdata.results[j]["const_name"] +
-          "</td>" +
-          "<td style='padding-left: 15px;text-align: initial;'>" +
-          successdata.results[j]["candidate_name"] +
-          "</td>" +
-          "<td>" +
-          successdata.results[j]["party_name"] +
-          "</td>" +
-          "<td class='lost-blog sorting_1'>" +
-          "<p>" +
-          successdata.results[j]["status"] +
-          "</p>" +
-          "</td>" +
+        tr = tr + "<td class='lost-blog sorting_1'>" + "<p>" + successdata.results[j]["status"] + "</p>" + "</td>" +
           "</tr>";
-        CombinedHTMLTable = CombinedHTMLTable + tr;
       } else {
-        tr =
-          "<tr>" +
-          "<td style='padding-left: 15px;text-align: initial;'>" +
-          successdata.results[j]["const_name"] +
-          "</td>" +
-          "<td style='padding-left: 15px;text-align: initial;'>" +
-          successdata.results[j]["candidate_name"] +
-          "</td>" +
-          "<td>" +
-          successdata.results[j]["party_name"] +
-          "</td>" +
-          "<td class='trailing-blog sorting_1'>" +
-          "<p>" +
-          successdata.results[j]["status"] +
-          "</p>" +
-          "</td>" +
+        tr = tr + "<td class='trailing-blog sorting_1'>" + "<p>" + successdata.results[j]["status"] + "</p>" + "</td>" +
           "</tr>";
-        CombinedHTMLTable = CombinedHTMLTable + tr;
       }
+      CombinedHTMLTable = CombinedHTMLTable + tr;
     }
     $("#constituency_tbody").html(CombinedHTMLTable);
 
@@ -1709,7 +1311,7 @@ function getPhaseResult() {
 
 function upElectionBanner() {
   var upImg =
-    "<img src='images/states/kerala.jpg' alt='hello' style='width:300; height: 250;' />";
+    "<img src='images/states/uttarpradesh.jpg' alt='hello' style='width:300; height: 250;' />";
   $("#state-img").html(upImg);
   $("#BannerAdd")
     .html(`<div id='div-gpt-ad-1619085131490-0' style='width: 728px; height: 90px;'>
@@ -1733,7 +1335,7 @@ function upElectionBanner() {
 
 function ukElectionBanner() {
   var ukImg =
-    "<img src='images/states/kerala.jpg' alt='hello' style='width:300; height: 250;' />";
+    "<img src='images/states/uttarakhand.jpg' alt='hello' style='width:300; height: 250;' />";
   $("#state-img").html(ukImg);
   $("#BannerAdd")
     .html(`<div id='div-gpt-ad-1619085131490-0' style='width: 728px; height: 90px;'>
@@ -1756,7 +1358,7 @@ function ukElectionBanner() {
 }
 function pbElectionBanner() {
   var pbimg =
-    " <img src='images/states/tamilnadu.jpg' alt=''style='width:300; height: 250;' />";
+    " <img src='images/states/punjab.jpg' alt=''style='width:300; height: 250;' />";
   $("#state-img").html(pbimg);
   $("#BannerAdd")
     .html(`<div id='div-gpt-ad-1619085076269-0' style='width: 728px; height: 90px;'>
@@ -1886,6 +1488,7 @@ function selectState(){
 
     document.getElementById("state-name").innerHTML = "UTTARPRADESH";
     upElectionBanner();
+
   }else if( state_el == "Pb"){
     document.getElementById("state-name").innerHTML = "PUNJAB";
     pbElectionBanner()
@@ -1895,7 +1498,6 @@ function selectState(){
   }
   getCrntYear();
   getDistrictResult();
-
 }
 $(document).ready(function () {
   $("#vip-list").hide();
