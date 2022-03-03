@@ -141,6 +141,12 @@
 	}
 }
 @media only screen and (max-width: 1024px){
+	h1{
+		font-size: 30px;
+	}
+	.btn5{
+		font-size: 15px;
+	}
 	.LW-width{
 		width: 40px !important;
 	}
@@ -514,6 +520,9 @@
 		
 }
 @media only screen and (max-width: 460px){
+	.btn5{
+		font-size: 14px !important;
+	}
 		#tally_lok_sabha::after {
 	content: "";
 	position: absolute;
@@ -529,6 +538,12 @@
 }
 	}
 @media only screen and (max-width: 360px){
+	.btn5{
+		font-size: 12px !important;
+	}
+	.wb1{
+		font-size: 14px !important;
+	}
 	.lead-win{
 		font-size: 14px;
 	}

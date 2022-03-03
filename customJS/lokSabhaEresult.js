@@ -1030,7 +1030,7 @@ function getPartyResult() {
     var other ="";
     var tr;
     var thead = "";
-    thead = `<tr><th class='party-class'></th><th class='party-class'> Lead</th><th class='party-class'>Won</th><th class='party-class'>Total</th></tr>`;
+    thead = `<tr><th class='party-class'></th><th class='party-class'> Lead/Won</th><th class='party-class'>Total</th></tr>`;
     CombinedHTMLTable = CombinedHTMLTable + thead;
 
     for (var j = 0; j <= successdata.results.length - 1; j++) {
@@ -1045,9 +1045,9 @@ function getPartyResult() {
           "<td class='ldf-party' style='font-weight: 700;'>" +
           successdata.results[j]["lead"] +
           "</td>" +
-          "<td class='ldf-party' style='font-weight: 700;'>" +
-          successdata.results[j]["won"] +
-          "</td>" +
+          // "<td class='ldf-party' style='font-weight: 700;'>" +
+          // successdata.results[j]["won"] +
+          // "</td>" +
           "<td class='ldf-party' style='font-weight: 700;'>" +
           successdata.results[j]["total"] +
           "</td>" +
@@ -1072,9 +1072,9 @@ function getPartyResult() {
             "<td class='alliance-style'>" +
             results[j]["lead"] +
             "</td>" +
-            "<td class='alliance-style'>" +
-            results[j]["won"] +
-            "</td>" +
+            // "<td class='alliance-style'>" +
+            // results[j]["won"] +
+            // "</td>" +
             "<td class='alliance-style'>" +
             results[j]["total"] +
             "</td>" +
@@ -1496,6 +1496,10 @@ function selectState(){
     document.getElementById("state-name").innerHTML = "UTTARAKHAND";
     ukElectionBanner();
   }
+  $('button').removeClass('clicked');
+  $('button').removeClass('active');
+  $("button.dist").addClass('clicked')
+  $("button.dist").addClass('active')
   getCrntYear();
   getDistrictResult();
 }
