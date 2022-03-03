@@ -297,7 +297,7 @@ function getVipResult() {
   // debugger;
   const tbody = document.querySelector("#AP_Constituency > tbody");
   if(state == "Up"){
-    url = "./json/vip.json";
+    url = "/json/vip.json";
   }
   else if(state == "Pb"){
     url = "";
@@ -896,7 +896,7 @@ function getDistrictResult() {
   }
   else if(state == "Pb"){
     // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.distResult;
-    url = "./json/pb.json";
+    url = "/json/pb.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -918,7 +918,7 @@ function getDistrictResult() {
     });
   }else if(state == "Uk"){
     // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.distResult;
-    url = "./json/uk.json";
+    url = "/json/uk.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -1543,10 +1543,7 @@ $(document).ready(function () {
     } else if ($("button.vip").hasClass("clicked")) {
       // document.getElementById('tdSearch').value;
       getVipResult();
-    } else if ($("button.phase").hasClass("clicked")) {
-      // document.getElementById('tdSearch').value;
-      getPhaseResult();
-    }
+    } 
     // getPcConst();
   }, 30000);
 });
