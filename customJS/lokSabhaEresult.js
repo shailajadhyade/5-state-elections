@@ -279,7 +279,10 @@ function getLiveStateNews() {
     $("#divPlayer").attr('src' , test1);
   }else{
     // var test1 ='./images/ads/standard-side-ad-2.jpg';
-    var player='<img src="./images/ads/standard-side-ad-2.jpg" style="margin-top: 45px;">';
+    var player=`<div id='div-gpt-ad-1646301508763-0' style='min-width: 300px; min-height: 250px;margin-top:45px;'><script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1646301508763-0'); });
+  </script>
+</div>`;
     $('#test-player').html(player);
     // $("#divPlayer").attr('src' , test1);
   }
@@ -1323,18 +1326,18 @@ function upElectionBanner() {
                         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619085131490-0'); });
                       </script>
                     </div>`);
-  $("#web-add")
-    .html(`<div id='div-gpt-ad-1619694076984-0' style='width: 300px; height: 250px;'>
-                        <script>
-                          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694076984-0'); });
-                        </script>
-                      </div>`);
-  $("#web-add1")
-    .html(`<div id='div-gpt-ad-1619694049650-0' style='width: 300px; height: 250px;'>
-                    <script>
-                      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694049650-0'); });
-                    </script>
-                  </div>`);
+  // $("#web-add")
+  //   .html(`<div id='div-gpt-ad-1619694076984-0' style='width: 300px; height: 250px;'>
+  //                       <script>
+  //                         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694076984-0'); });
+  //                       </script>
+  //                     </div>`);
+  // $("#web-add1")
+  //   .html(`<div id='div-gpt-ad-1619694049650-0' style='width: 300px; height: 250px;'>
+  //                   <script>
+  //                     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694049650-0'); });
+  //                   </script>
+  //                 </div>`);
 }
 
 function ukElectionBanner() {
