@@ -891,11 +891,11 @@ function getDistrictResult() {
       for (var i = 0; i <= distresults.length - 1; i++) {
         tr = "<tr><td class='dist1' colspan=5> " +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></td></tr>" +
           "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna'>" +distresults[i].bjp_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].sp_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].bsp_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].inc_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].oth_lead +"</td></tr>" ;
+          "<td class='edhyna'>" +distresults[i].bjp_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].sp_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].bsp_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].inc_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].oth_wonlead +"</td></tr>" ;
         CombinedHTMLTable = CombinedHTMLTable + tr;
       }
       $("#constituency_tbody").html(CombinedHTMLTable);
@@ -913,11 +913,11 @@ function getDistrictResult() {
       for (var i = 0; i <= distresults.length - 1; i++) {
         tr = "<tr><td class='dist1' colspan=5> " +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></td></tr>" +
           "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna'>" +distresults[i].inc_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].aap_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].sad_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].bjp_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].oth_lead +"</td></tr>" ;
+          "<td class='edhyna'>" +distresults[i].inc_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].aap_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].sad_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].bjp_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].oth_wonlead +"</td></tr>" ;
         CombinedHTMLTable = CombinedHTMLTable + tr;
       }
       $("#constituency_tbody").html(CombinedHTMLTable);
@@ -934,10 +934,10 @@ function getDistrictResult() {
       for (var i = 0; i <= distresults.length - 1; i++) {
         tr = "<tr><td class='dist1' colspan=5> " +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></td></tr>" +
           "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna'>" +distresults[i].bjp_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].inc_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].aap_lead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].oth_lead +"</td></tr>" ;
+          "<td class='edhyna'>" +distresults[i].bjp_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].inc_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].aap_wonlead +"</td>" +
+          "<td class='edhyna'>" +distresults[i].oth_wonlead +"</td></tr>" ;
         CombinedHTMLTable = CombinedHTMLTable + tr;
       }
       $("#constituency_tbody").html(CombinedHTMLTable);
