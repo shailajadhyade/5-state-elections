@@ -1,5 +1,6 @@
 @media only screen and (min-width : 1824px) {
-	#AP_Constituency {
+
+#AP_Constituency {
     font-size: inherit;
 }
 #TG_Constituency {
@@ -47,7 +48,7 @@
 }
 @media only screen and (min-width : 1724px) {
 	.LW-width{
-		width: 73px !important;
+		width: 81px !important;
 	}
 }
 @media only screen and (max-width : 1660px) {
@@ -284,8 +285,15 @@
   }
   
 }
-
+@media only screen and (min-width : 991px) {
+	#Pb_data tr .lead-won, #Ga_data tr .lead-won, #Mnr_data tr .lead-won{
+		display: none;
+	}
+}
 @media only screen and (max-width : 991px) {
+	/* #Pb_data tr .lead-won, #Ga_data tr .lead-won, #Mnr_data tr .lead-won{
+		display: block;
+	} */
 	.PB-padding-left{
 		padding-left: 0px !important;
 	}
@@ -423,6 +431,7 @@
 */
 }
 @media only screen and (max-width: 767px){
+
 	.pers-blg-text h4 {
 		font-size: 16px !important;
 		margin-left: 20px !important;
@@ -479,7 +488,8 @@
 }
 	
 }
-@media only screen and (max-width: 540px){
+
+@media only screen and (max-width: 540px){	
 	.UK-LW-width{
 		width: auto !important;
 	}

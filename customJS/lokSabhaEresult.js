@@ -703,12 +703,12 @@ var test = getLiveStreamURL();
 // (above table) five state tally
 
 function fiveStateTally(CombineTable, theadh, state) {
-  var t="<tr>";
+  var t="";
   for(i=0;i<theadh.length;i++){
     theadh[i]= theadh[i]==="OTHERS"? "OTH": theadh[i];
-    t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-right: 1px solid #bb454f;' width='100'>" +theadh[i] +"</div></th>";
+    t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-left: 1px solid #bb454f;' width='100'>" +theadh[i] +"</div></th>";
   }
-  CombineTable = t + "<tr>" + CombineTable + "</tr>";
+  CombineTable = "<tr><th class='lead-won' style='background: #B80403;'><div> </div></th>"+t + "</tr><tr>" + "<td class='lead-won' style='font-weight: 700;'>Lead/won</td>"+CombineTable + "</tr>";
   if(state==="UP"){
     $("#Up_data").html(CombineTable);
   }else if(state === "PB"){
@@ -725,21 +725,20 @@ function fiveStateTally(CombineTable, theadh, state) {
 function electionResults() {
   console.log("hakhkd");
   // var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5Results;
-  var url = "./json/kerala.json";
+  var url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/five_states_common_tally.php";
   getJSON(url, function (response) {
     // debugger;
-    var arr = ["UP", "PB", "UK", "GA", "MNP"];
+    var arr = ["34", "28", "35", "11", "22"];
     var totaltally = [292, 126, 234, 140, 30];
     for (var j = 0; j < arr.length; j++) {
       var CombineTable = "";
       var com2 = "";
       var theadh = [];
       var i;
-
       for (i = 0; i < response.totalresults.length; i++) {
         if (response.totalresults[i].state_id == arr[j]) {
           theadh.push(response.totalresults[i].party_name);
-          var trf = "<td>" + response.totalresults[i].lead + "</td>";
+           trf = "<td>" + response.totalresults[i].total + "</td>";
           CombineTable = CombineTable + trf;
           // var trf2 =
           //   "<td style='color:green'>" + response.totalresults[i].won + "</td>";
@@ -750,19 +749,19 @@ function electionResults() {
           var westTotal = countTally + "/" + totalTally;
         }
       }
-      if (arr[j] == "UP") {
+      if (arr[j] == "34") {
         $("#UpTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh, "UP");
-      } else if (arr[j] == "PB") {
+      } else if (arr[j] == "28") {
         $("#PbTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh, "PB");
-      } else if (arr[j] == "UK") {
+      } else if (arr[j] == "35") {
         $("#UkTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh,"UK");
-      } else if (arr[j] == "GA") {
+      } else if (arr[j] == "11") {
         $("#tamilTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh,"GA");
-      } else if (arr[j] == "MNP") {
+      } else if (arr[j] == "22") {
         $("#keralaTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh,"MNP");
       }
@@ -875,7 +874,7 @@ function getDistrictResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    url = "./json/up.json";
+    url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/districtwise_party_tally.php";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -978,7 +977,7 @@ function getPartyResult() {
   const tbody = document.querySelector("#AP_Constituency > tbody");
   var state = document.getElementById("mySelect").value;
   if(state == "Up"){
-    url = "http://65.0.40.45/web_api/website/tamilnadu_2021/partywise_wonlead_total.php";
+    url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/partywise_wonlead_total.php";
   }
   else if(state == "Pb"){
     url = "/json/pbpartywise.json";
@@ -1040,10 +1039,10 @@ function getPartyResult() {
         tr =
           "<tr>" +
           "<td class='ldf-party' style='font-weight: 700;'>" +
-          successdata.results[j]["party_name"] +'  ('+ successdata.results[j]['lead']+'/'+ successdata.results[j]['total']+')'+
+          successdata.results[j]["party_name"] +
           "</td>" +
           "<td class='ldf-party' style='font-weight: 700;'>" +
-          successdata.results[j]["lead"] +
+          successdata.results[j]["total"] +
           "</td>" +
           // "<td class='ldf-party' style='font-weight: 700;'>" +
           // successdata.results[j]["won"] +
@@ -1070,7 +1069,7 @@ function getPartyResult() {
             results[j]["party_name"] +
             "</td>" +
             "<td class='alliance-style'>" +
-            results[j]["lead"] +
+            results[j]["total"] +
             "</td>" +
             // "<td class='alliance-style'>" +
             // results[j]["won"] +
@@ -1107,7 +1106,7 @@ function getConstResult() {
   // debugger;
   if(state == "Up"){
     // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.kerala.constwise;
-    url = "http://65.0.40.45/web_api/website/westbengal_2021/statewise_const_tally.php";
+    url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/statewise_const_tally.php";
   }
   else if(state == "Pb"){
     url = "http://65.0.40.45/web_api/website/kerala_2021/statewise_const_tally.php";
@@ -1508,9 +1507,9 @@ $(document).ready(function () {
   electionResults();
   getLiveStateNews();
   bannerAdd();
-  setInterval(() => {
-    electionResults();
-  }, 30000);
+  // setInterval(() => {
+  //   electionResults();
+  // }, 30000);
   getDistrictResult();
   selectState();
   // getCrntYear();
