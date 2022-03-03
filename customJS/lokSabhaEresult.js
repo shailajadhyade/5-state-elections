@@ -15,55 +15,43 @@ var list1 = [],
   list4 = [],
   list5 = [],
   all_5_states = [];
-var url1 =
-  "http://mcapi.etvbharat.com/web_api/website/kerala_2021/five_states_common_tally.php";
+// var url1 ="http://mcapi.etvbharat.com/web_api/website/kerala_2021/five_states_common_tally.php";
 // var test="";
-var stremingURLs;
+// var stremingURLs;
 var appData = {
   apiConfig: {
-    baseURL: "https://mcapi.etvbharat.com//web_api/website/",
+    // appData.apiConfig.baseURL + appData.apiConfig.suffixes.getState
+    baseURL: "http://65.0.40.45/web_api/website/",
 
     suffixes: {
       getState: "getLanguage.php",
-      state5Results: "kerala_2021/five_states_common_tally.php",
-      tamilnadu: {
-        distResult: "tamilnadu_2021/districtwise_party_tally.php",
-        constwise: "tamilnadu_2021/statewise_const_tally.php",
-        allianceWise: "tamilnadu_2021/partywise_wonlead_total.php",
-        viplist: "tamilnadu_2021/vipcandidates_wonlead.php",
+      state5tally: "uttarpradesh_2022/five_states_common_tally.php",
+      uttarpradesh: {
+        distResult: "uttarpradesh_2022/districtwise_party_tally.php",
+        constwiseR: "uttarpradesh_2022/statewise_const_tally.php",
+        allianceWiseR: "uttarpradesh_2022/partywise_wonlead_total.php", 
+        viplistup: "uttarpradesh_2022/vipcandidates_wonlead.php",
       },
-      kerala: {
-        // http://65.0.40.45/web_api/website/kerala_2021/vipcandidates_wonlead.php
-        distResult: "kerala_2021/districtwise_party_tally.php",
-        constwise: "kerala_2021/statewise_const_tally.php",
-        allianceWise: "kerala_2021/partywise_wonlead_total.php",
-        viplist: "kerala_2021/vipcandidates_wonlead.php",
+      uttarakhand: {
+        distResult: "uttarakhand_2022/districtwise_party_tally.php",
+        constwiseR: "uttarakhand_2022/statewise_const_tally.php",
+        allianceWiseR: "uttarakhand_2022/partywise_wonlead_total.php", 
+        viplistup: "uttarakhand_2022/vipcandidates_wonlead.php",
       },
-      assam: {
-        distResult: "assam_2021/districtwise_party_tally.php",
-        constwise: "assam_2021/statewise_const_tally.php",
-        allianceWise: "assam_2021/partywise_wonlead_total.php",
-        phaseWise: "assam_2021/as_phase.php",
-        viplist: "assam_2021/vipcandidates_wonlead.php",
+      punjab: {
+        distResult: "punjab_2022/districtwise_party_tally.php",
+        constwiseR: "punjab_2022/statewise_const_tally.php",
+        allianceWiseR: "punjab_2022/partywise_wonlead_total.php", 
+        viplistup: "punjab_2022/vipcandidates_wonlead.php",
       },
-      westBengal: {
-        // http://65.0.40.45/web_api/website/westbengal_2021/districtwise_party_tally.php
-        distResult: "westbengal_2021/districtwise_party_tally.php",
-        constwise: "westbengal_2021/statewise_const_tally.php",
-        allianceWise: "westbengal_2021/partywise_wonlead_total.php",
-        phaseWise: "westbengal_2021/wb_phase.php",
-        viplist: "westbengal_2021/vipcandidates_wonlead.php",
-      },
-      puducherry: {
-        constwise: "puducherry_2021/statewise_const_tally.php",
-      },
-      partyWiseResults: "partywise_wonlead_total.php?language=english",
-      ndaResults: "partywise_wonlead_total_sf.php?language=english",
-      mgbResults: "partywise_wonlead_total_tf.php?language=english",
-      stateVIP: "vipcandidates_wonlead.php?language=english",
-      stateConstituency: "statewise_const_tally.php?language=english",
-      nationalPerson: "vipcandidates_wonlead.php?language=english",
-      resultType: "?electionType=",
+     
+      // partyWiseResults: "partywise_wonlead_total.php?language=english",
+      // ndaResults: "partywise_wonlead_total_sf.php?language=english",
+      // mgbResults: "partywise_wonlead_total_tf.php?language=english",
+      // stateVIP: "vipcandidates_wonlead.php?language=english",
+      // stateConstituency: "statewise_const_tally.php?language=english",
+      // nationalPerson: "vipcandidates_wonlead.php?language=english",
+      // resultType: "?electionType=",
     },
   },
 };
@@ -728,8 +716,9 @@ function fiveStateTally(CombineTable, theadh, state) {
 }
 
 function electionResults() {
-  // var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5Results;
-  var url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/five_states_common_tally.php";
+  var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5tally;
+  debugger
+  // var url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/five_states_common_tally.php";
 
   var arr=[],totaltally=[];
   var results=[];
@@ -880,7 +869,8 @@ function getDistrictResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/districtwise_party_tally.php";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.distResult;
+    // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/districtwise_party_tally.php";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -902,6 +892,7 @@ function getDistrictResult() {
     });
   }
   else if(state == "Pb"){
+    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.distResult;
     url = "./json/pb.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
@@ -923,6 +914,7 @@ function getDistrictResult() {
       $("#constituency_tbody").html(CombinedHTMLTable);
     });
   }else if(state == "Uk"){
+    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.distResult;
     url = "./json/uk.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
@@ -983,11 +975,14 @@ function getPartyResult() {
   const tbody = document.querySelector("#AP_Constituency > tbody");
   var state = document.getElementById("mySelect").value;
   if(state == "Up"){
-    url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/partywise_wonlead_total.php";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.allianceWiseR;
+    // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/partywise_wonlead_total.php";
   }
   else if(state == "Pb"){
+    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.allianceWiseR;
     url = "/json/pbpartywise.json";
   }else if(state == "Uk"){
+    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.allianceWiseR;
     url = "/json/uk-partwise.json";
   }
   while (tbody.firstChild) {
@@ -1111,12 +1106,14 @@ function getConstResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.kerala.constwise;
-    url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/statewise_const_tally.php";
+    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.constwiseR;
+    // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/statewise_const_tally.php";
   }
   else if(state == "Pb"){
+    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.constwiseR;
     url = "http://65.0.40.45/web_api/website/kerala_2021/statewise_const_tally.php";
   }else if(state == "Uk"){
+    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.constwiseR;
     url = "http://65.0.40.45/web_api/website/tamilnadu_2021/statewise_const_tally.php";
   }
   while (tbody.firstChild) {
