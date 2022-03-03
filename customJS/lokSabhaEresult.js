@@ -1030,7 +1030,7 @@ function getPartyResult() {
     var other ="";
     var tr;
     var thead = "";
-    thead = `<tr><th class='party-class'></th><th class='party-class'> Lead/Won</th><th class='party-class'>Total</th></tr>`;
+    thead = `<tr><th class='party-class'>Party/Alliance Name</th><th class='party-class'> Lead/Won</th></tr>`;
     CombinedHTMLTable = CombinedHTMLTable + thead;
 
     for (var j = 0; j <= successdata.results.length - 1; j++) {
@@ -1040,7 +1040,7 @@ function getPartyResult() {
         tr =
           "<tr>" +
           "<td class='ldf-party' style='font-weight: 700;'>" +
-          successdata.results[j]["party_name"] +
+          successdata.results[j]["party_name"] +'  ('+ successdata.results[j]['lead']+'/'+ successdata.results[j]['total']+')'+
           "</td>" +
           "<td class='ldf-party' style='font-weight: 700;'>" +
           successdata.results[j]["lead"] +
@@ -1048,9 +1048,9 @@ function getPartyResult() {
           // "<td class='ldf-party' style='font-weight: 700;'>" +
           // successdata.results[j]["won"] +
           // "</td>" +
-          "<td class='ldf-party' style='font-weight: 700;'>" +
-          successdata.results[j]["total"] +
-          "</td>" +
+          // "<td class='ldf-party' style='font-weight: 700;'>" +
+          // successdata.results[j]["total"] +
+          // "</td>" +
           "</tr>";
           if(successdata.results[j]["party_name"] !== "OTHER"){
             CombinedHTMLTable = CombinedHTMLTable + tr;
@@ -1075,9 +1075,9 @@ function getPartyResult() {
             // "<td class='alliance-style'>" +
             // results[j]["won"] +
             // "</td>" +
-            "<td class='alliance-style'>" +
-            results[j]["total"] +
-            "</td>" +
+            // "<td class='alliance-style'>" +
+            // results[j]["total"] +
+            // "</td>" +
             "</tr>";
           CombinedHTMLTable = CombinedHTMLTable + tr;
         }
