@@ -729,11 +729,16 @@ function fiveStateTally(CombineTable, theadh, state) {
 
 function electionResults() {
   // var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5Results;
-  var url = "./json/kerala.json";
+  var url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/five_states_common_tally.php";
+  var arr=[],totaltally=[];
+  var results=[];
   getJSON(url, function (response) {
-    // debugger;
-    var arr = ["UP", "PB", "UK", "GA", "MNP"];
-    var totaltally = [292, 126, 234, 140, 30];
+    for(var i=0;i<response.totalresults.length;i++){
+      if(!response.totalresults[i].party_name) {
+          arr.push(response.totalresults[i].state_id);
+          totaltally.push(response.totalresults[i].total_seats)
+      }
+    }
     for (var j = 0; j < arr.length; j++) {
       var CombineTable = "";
       var com2 = "";
@@ -741,35 +746,32 @@ function electionResults() {
       var i;
 
       for (i = 0; i < response.totalresults.length; i++) {
-        if (response.totalresults[i].state_id == arr[j]) {
+        if (response.totalresults[i].state_id == arr[j] && response.totalresults[i].party_name) {
           theadh.push(response.totalresults[i].party_name);
           var trf = "<td>" + response.totalresults[i].lead + "</td>";
           CombineTable = CombineTable + trf;
-          // var trf2 =
-          //   "<td style='color:green'>" + response.totalresults[i].won + "</td>";
-          // com2 = com2 + trf2;
-        } else if (response.totalresults[i].total_seats == totaltally[j]) {
+        }else if (response.totalresults[i].total_seats == totaltally[j]) {
           var countTally = response.totalresults[i].total_count;
           var totalTally = response.totalresults[i].total_seats;
           var westTotal = countTally + "/" + totalTally;
         }
       }
-      if (arr[j] == "UP") {
+      if (arr[j] == "34") {
         $("#UpTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh, "UP");
-      } else if (arr[j] == "PB") {
-        $("#PbTotal").html(westTotal);
-        fiveStateTally(CombineTable, theadh, "PB");
-      } else if (arr[j] == "UK") {
+      } else if (arr[j] == "35") {
         $("#UkTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh,"UK");
-      } else if (arr[j] == "GA") {
+      } else if (arr[j] == "11") {
         $("#tamilTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh,"GA");
-      } else if (arr[j] == "MNP") {
+      } else if (arr[j] == "22") {
         $("#keralaTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh,"MNP");
-      }
+      } else if (arr[j] == "28") {
+        $("#PbTotal").html(westTotal);
+        fiveStateTally(CombineTable, theadh, "PB");
+      } 
     }
   });
 }
@@ -900,7 +902,6 @@ function getDistrictResult() {
     });
   }
   else if(state == "Pb"){
-    debugger
     url = "./json/pb.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
@@ -1508,9 +1509,10 @@ function selectState(){
   $("#election-state").show();
 }
 $(document).ready(function () {
-  $("#vip-list").hide();
   electionResults();
   getLiveStateNews();
+  $("#vip-list").hide();
+  
   // bannerAdd();
   setInterval(() => {
     electionResults();
