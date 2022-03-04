@@ -478,18 +478,49 @@
 @media only screen and (max-width : 660px) {
 	.select-btn {
 	width: 60%;
+	}
+	.info-graph-bot {
+		min-height: 351px;
+	}	
+	.img-blg img{
+		margin-left: -28%;
+	}	
 }
 
-.info-graph-bot {
-    min-height: 351px;
-}	
-.img-blg img{
-	margin-left: -28%;
-}
-	
+@media only screen and (min-width: 540px){	
+	#web-ad1, #web-ad2{
+		display: block !important;
+	}
+	#mob-ad1, #mob-ad2{
+		display: none !important;
+	}
 }
 
 @media only screen and (max-width: 540px){	
+	#web-ad1, #web-ad2{
+		display: none !important;
+	}
+	#mob-ad1, #mob-ad2{
+		display: block !important;
+	}
+	.tally-mob{
+		padding-right: 0 !important;
+	}
+	.tally-table{
+		padding-right: 10px !important;
+    	padding-left: 10px !important;
+	}
+	.state-name{
+		font-size: 19px !important;
+	}
+	.lead-won{
+		font-size: 14px !important;
+		font-weight: 600 !important;
+		padding: 4px 1px !important;
+	}
+	.tdata2 div{
+		font-size: 15px !important;
+	}
 	.UK-LW-width{
 		width: auto !important;
 	}
@@ -507,7 +538,7 @@
 	}
 	.pers-blg-text h4 {
 		 font-size: 14px !important;
-		 margin-left: 20px !important;
+		 margin-left: 30px !important;
 	}
 	.state-wise-map-blg {
 	max-width: 100%;
@@ -520,8 +551,6 @@
 	width: 100%;
 }
 .year{
-  /* background: #00011E;
-  color: white; */
   border: none;
   outline: none;
   padding: 10px 26px;

@@ -720,7 +720,6 @@ function fiveStateTally(CombineTable, theadh, state) {
 
 function electionResults() {
   var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5tally;
-  debugger
   // var url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/five_states_common_tally.php";
 
   var arr=[],totaltally=[];
@@ -1043,7 +1042,7 @@ function getPartyResult() {
         tr =
           "<tr>" +
           "<td class='ldf-party' style='font-weight: 700;'>" +
-          successdata.results[j]["party_name"] +
+          successdata.results[j]["party_name"] + '  ('+successdata.results[j]["total"]+'/'+successdata.results[j]["Seats Contested"]+')'+
           "</td>" +
           "<td class='ldf-party' style='font-weight: 700;'>" +
           successdata.results[j]["total"] +
@@ -1347,18 +1346,18 @@ function ukElectionBanner() {
                         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619085131490-0'); });
                       </script>
                     </div>`);
-  $("#web-add")
-    .html(`<div id='div-gpt-ad-1619694076984-0' style='width: 300px; height: 250px;'>
-                        <script>
-                          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694076984-0'); });
-                        </script>
-                      </div>`);
-  $("#web-add1")
-    .html(`<div id='div-gpt-ad-1619694049650-0' style='width: 300px; height: 250px;'>
-                    <script>
-                      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694049650-0'); });
-                    </script>
-                  </div>`);
+  // $("#web-add")
+  //   .html(`<div id='div-gpt-ad-1619694076984-0' style='width: 300px; height: 250px;'>
+  //                       <script>
+  //                         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694076984-0'); });
+  //                       </script>
+  //                     </div>`);
+  // $("#web-add1")
+  //   .html(`<div id='div-gpt-ad-1619694049650-0' style='width: 300px; height: 250px;'>
+  //                   <script>
+  //                     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619694049650-0'); });
+  //                   </script>
+  //                 </div>`);
 }
 function pbElectionBanner() {
   var pbimg =
@@ -1376,18 +1375,18 @@ function pbElectionBanner() {
           googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619085019384-0'); });
         </script>
         </div>`);
-  $("#web-add")
-    .html(`<div id='div-gpt-ad-1619693895857-0' style='width: 300px; height: 250px;'>
-                        <script>
-                          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619693895857-0'); });
-                        </script>
-                        </div>`);
-  $("#web-add1")
-    .html(`<div id='div-gpt-ad-1619693924710-0' style='width: 300px; height: 250px;'>
-                      <script>
-                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619693924710-0'); });
-                      </script>
-                      </div>`);
+  // $("#web-add")
+  //   .html(`<div id='div-gpt-ad-1619693895857-0' style='width: 300px; height: 250px;'>
+  //                       <script>
+  //                         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619693895857-0'); });
+  //                       </script>
+  //                       </div>`);
+  // $("#web-add1")
+  //   .html(`<div id='div-gpt-ad-1619693924710-0' style='width: 300px; height: 250px;'>
+  //                     <script>
+  //                       googletag.cmd.push(function() { googletag.display('div-gpt-ad-1619693924710-0'); });
+  //                     </script>
+  //                     </div>`);
 
 }
 // function getPcConst() {

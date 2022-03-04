@@ -2728,7 +2728,7 @@ a.male-bt {
 
 
 .table1>tbody>tr>td, .table1>tbody>tr>th, .table1>tfoot>tr>td, .table1>tfoot>tr>th, .table1>thead>tr>td, .table1>thead>tr>th {
-	padding: 4px 0px; 
+	padding: 4px 2px; 
 	line-height: 34px;
 	font-size: 16px;
 	text-align: center;
