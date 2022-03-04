@@ -11,7 +11,7 @@
   "const_name": "up-const",
   "candidate_name": "up-cand-name",
   "party_name": "party-name",
-  "status": "N/A"
+  "status": "won"
   },
   {
   "state_name": "UTTARPRADESH",
@@ -25,7 +25,7 @@
   "const_name": "up-const",
   "candidate_name": "up-cand-name",
   "party_name": "party-name",
-  "status": "N/A"
+  "status": "lead"
   },
   {
   "state_name": "UTTARPRADESH",
@@ -39,7 +39,7 @@
   "const_name": "up-const",
   "candidate_name": "up-cand-name",
   "party_name": "party-name",
-  "status": "N/A"
+  "status": "lead"
   },
   {
   "state_name": "UTTARPRADESH",
