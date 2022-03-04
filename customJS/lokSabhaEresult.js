@@ -297,12 +297,12 @@ function getVipResult() {
   // debugger;
   const tbody = document.querySelector("#AP_Constituency > tbody");
   if(state == "Up"){
-    url = "/json/vip.json";
+    url = "./json/vip.json";
   }
   else if(state == "Pb"){
-    url = "/json/vip.json";
+    url = "./json/vip.json";
   }else if(state == "Uk"){
-    url = "/json/vip.json";
+    url = "./json/vip.json";
   }
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
@@ -350,20 +350,20 @@ function getVipResult() {
         leadingBlogElement =
           "<span class='leading-blog'>" + leadings + "</span>";
         var winlose =
-          '<div><img class="win" src="images/states/WIN_THUMB.png"  alt=""/></div>';
+          '<div><img class="win" src="/images/states/WIN_THUMB.png"  alt=""/></div>';
       } else if (personailty.leadings.toLowerCase() == "won") {
         leadingBlogElement = "<span class='won-blog'>" + leadings + "</span>";
         var winlose =
-          '<div><img class="win" src="images/states/WIN_THUMB.png"  alt=""/></div>';
+          '<div><img class="win" src="/images/states/WIN_THUMB.png"  alt=""/></div>';
       } else if (personailty.leadings.toLowerCase() == "trailing") {
         leadingBlogElement =
           "<span class='trailing-blog'>" + leadings + "</span>";
         var winlose =
-          '<div><img src="images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
+          '<div><img src="/images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
       } else if (personailty.leadings.toLowerCase() == "lost") {
         leadingBlogElement = "<span class='lost-blog'>" + leadings + "</span>";
         var winlose =
-          '<div><img src="images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
+          '<div><img src="/images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
       } else {
         leadingBlogElement = "<span class='lost-blog'>" + leadings + "</span>";
         // var winlose = '<div><img src="images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
@@ -872,7 +872,7 @@ function getDistrictResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.distResult;
+    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.distResult;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/districtwise_party_tally.php";
     url='./json/up.json';
     $.getJSON(url, function (successdata) {
@@ -897,7 +897,7 @@ function getDistrictResult() {
   }
   else if(state == "Pb"){
     // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.distResult;
-    url = "/json/pb.json";
+    url = "./json/pb.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -919,7 +919,7 @@ function getDistrictResult() {
     });
   }else if(state == "Uk"){
     // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.distResult;
-    url = "/json/uk.json";
+    url = "./json/uk.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -979,16 +979,16 @@ function getPartyResult() {
   const tbody = document.querySelector("#AP_Constituency > tbody");
   var state = document.getElementById("mySelect").value;
   if(state == "Up"){
-    url="/json/uppartywise.json"
+    url="./json/uppartywise.json"
     // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.allianceWiseR;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/partywise_wonlead_total.php";
   }
   else if(state == "Pb"){
     // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.allianceWiseR;
-    url = "/json/pbpartywise.json";
+    url = "./json/pbpartywise.json";
   }else if(state == "Uk"){
     // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.allianceWiseR;
-    url = "/json/uk-partwise.json";
+    url = "./json/uk-partwise.json";
   }
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
@@ -1320,7 +1320,7 @@ function getPhaseResult() {
 
 function upElectionBanner() {
   var upImg =
-    "<img src='images/states/uttarpradesh.jpg' alt='hello' style='width:300; height: 250;' />";
+    "<img src='/images/states/uttarpradesh.jpg' alt='hello' style='width:300; height: 250;' />";
   $("#state-img").html(upImg);
   $("#BannerAdd")
     .html(`<div id='div-gpt-ad-1619085131490-0' style='width: 728px; height: 90px;'>
@@ -1344,7 +1344,7 @@ function upElectionBanner() {
 
 function ukElectionBanner() {
   var ukImg =
-    "<img src='images/states/uttarakhand.jpg' alt='hello' style='width:300; height: 250;' />";
+    "<img src='/images/states/uttarakhand.jpg' alt='hello' style='width:300; height: 250;' />";
   $("#state-img").html(ukImg);
   $("#BannerAdd")
     .html(`<div id='div-gpt-ad-1619085131490-0' style='width: 728px; height: 90px;'>
@@ -1367,7 +1367,7 @@ function ukElectionBanner() {
 }
 function pbElectionBanner() {
   var pbimg =
-    " <img src='images/states/punjab.jpg' alt=''style='width:300; height: 250;' />";
+    " <img src='/images/states/punjab.jpg' alt=''style='width:300; height: 250;' />";
   $("#state-img").html(pbimg);
   $("#BannerAdd")
     .html(`<div id='div-gpt-ad-1619085076269-0' style='width: 728px; height: 90px;'>
