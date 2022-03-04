@@ -21,7 +21,8 @@ var list1 = [],
 var appData = {
   apiConfig: {
     // appData.apiConfig.baseURL + appData.apiConfig.suffixes.getState
-    baseURL: "http://65.0.40.45/web_api/website/",
+    // baseURL: "http://65.0.40.45/web_api/website/",
+    baseURL: "https://mcapi.etvbharat.com/web_api/website/",
 
     suffixes: {
       getState: "getLanguage.php",
@@ -720,9 +721,9 @@ function fiveStateTally(CombineTable, theadh, state) {
 
 function electionResults() {
 
-  // var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5tally;
+  var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5tally;
   // var url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/five_states_common_tally.php";
-  var url='/elections/json/kerala.json';
+  // var url='/elections/json/kerala.json';
   var arr=[],totaltally=[];
   var results=[];
   getJSON(url, function (response) {
@@ -872,9 +873,9 @@ function getDistrictResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.distResult;
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.distResult;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/districtwise_party_tally.php";
-    url='./json/up.json';
+    // url='./json/up.json';
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -896,8 +897,8 @@ function getDistrictResult() {
     });
   }
   else if(state == "Pb"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.distResult;
-    url = "./json/pb.json";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.distResult;
+    // url = "./json/pb.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -918,8 +919,8 @@ function getDistrictResult() {
       $("#constituency_tbody").html(CombinedHTMLTable);
     });
   }else if(state == "Uk"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.distResult;
-    url = "./json/uk.json";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.distResult;
+    // url = "./json/uk.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -979,16 +980,16 @@ function getPartyResult() {
   const tbody = document.querySelector("#AP_Constituency > tbody");
   var state = document.getElementById("mySelect").value;
   if(state == "Up"){
-    url="./json/uppartywise.json"
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.allianceWiseR;
+    // url="./json/uppartywise.json"
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.allianceWiseR;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/partywise_wonlead_total.php";
   }
   else if(state == "Pb"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.allianceWiseR;
-    url = "./json/pbpartywise.json";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.allianceWiseR;
+    // url = "./json/pbpartywise.json";
   }else if(state == "Uk"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.allianceWiseR;
-    url = "./json/uk-partwise.json";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.allianceWiseR;
+    // url = "./json/uk-partwise.json";
   }
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
@@ -1111,17 +1112,17 @@ function getConstResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    url='./json/upconstwise.json';
-    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.constwiseR;
+    // url='./json/upconstwise.json';
+    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.constwiseR;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/statewise_const_tally.php";
   }
   else if(state == "Pb"){
-    url='./json/pbconstwise.json';
-    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.constwiseR;
+    // url='./json/pbconstwise.json';
+    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.constwiseR;
     // url = "http://65.0.40.45/web_api/website/kerala_2021/statewise_const_tally.php";
   }else if(state == "Uk"){
-    url= './json/ukconstwise.json';
-    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.constwiseR;
+    // url= './json/ukconstwise.json';
+    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.constwiseR;
     // url = "http://65.0.40.45/web_api/website/tamilnadu_2021/statewise_const_tally.php";
   }
   while (tbody.firstChild) {
