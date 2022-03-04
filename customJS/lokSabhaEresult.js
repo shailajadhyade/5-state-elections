@@ -722,7 +722,7 @@ function electionResults() {
 
   // var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5tally;
   // var url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/five_states_common_tally.php";
-  var url='./json/kerala.json';
+  var url='/elections/json/kerala.json';
   var arr=[],totaltally=[];
   var results=[];
   getJSON(url, function (response) {
