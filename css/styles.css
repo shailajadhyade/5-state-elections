@@ -1909,7 +1909,7 @@ td.won-blog p {
 }
 .party-btn {
 	display: inline-block;
-    float: left;
+    /* float: left; */
     border-radius: 50%;
     width: 6px;
     height: 6px;
@@ -1937,7 +1937,7 @@ td.won-blog p {
 .info-popover {
 	margin-left: 5px;
 }
-.info-popover:hover {}
+/* .info-popover:hover {} */
 
 .info-tabs li a {
 	padding: 5px;
@@ -1948,7 +1948,7 @@ td.won-blog p {
 
 .info-tabs{
 	display: inline-block;
-    float: right;
+    /* float: right; */
     box-shadow: 3px 4px 3px 1px #cccccc;
     border-radius: 10px;
 	background-color: #ededed;
@@ -2466,7 +2466,7 @@ a.male-bt {
 .ftr-menu ul li {
 	list-style: none;
 	display: inline-block;
-	float: left;
+	/* float: left; */
     box-sizing: border-box;
     padding-right: 16px;
     margin-bottom: 7px;
