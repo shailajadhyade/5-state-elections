@@ -21,7 +21,8 @@ var list1 = [],
 var appData = {
   apiConfig: {
     // appData.apiConfig.baseURL + appData.apiConfig.suffixes.getState
-    baseURL: "http://65.0.40.45/web_api/website/",
+    // baseURL: "http://65.0.40.45/web_api/website/",
+    baseURL: "https://mcapi.etvbharat.com/web_api/website/",
 
     suffixes: {
       getState: "getLanguage.php",
@@ -721,9 +722,9 @@ function fiveStateTally(CombineTable, theadh, state) {
 
 function electionResults() {
 
-  // var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5tally;
+  var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5tally;
   // var url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/five_states_common_tally.php";
-  var url='./json/kerala.json';
+  // var url='/elections/json/kerala.json';
   var arr=[],totaltally=[];
   var results=[];
   getJSON(url, function (response) {
@@ -802,15 +803,15 @@ function getCrntYear() {
   var state_el = document.getElementById("mySelect").value;
   if ( state_el == "Up") {
     var frame1 =
-      '<iframe title="Uttarpradesh Winners" aria-label="Map" id="datawrapper-chart-Z30ot" src="https://datawrapper.dwcdn.net/Z30ot/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
+      '<iframe title="Uttarpradesh Winners" aria-label="Map" id="datawrapper-chart-Z30ot" src="https://datawrapper.dwcdn.net/p01uu/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
     $("#iframe-state").html(frame1);
   } else if ( state_el == "Pb") {
     var frame1 =
-      '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/41N0A/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="707"></iframe>';
+      '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/xH7gO/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="707"></iframe>';
     $("#iframe-state").html(frame1);
   } else if ( state_el == "Uk") {
     var frame1 =
-      '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/I19Oa/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
+      '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/gvAQr/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
     $("#iframe-state").html(frame1);
   }
   $("button.prev-year").removeClass("clicked");
@@ -873,9 +874,9 @@ function getDistrictResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.distResult;
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.distResult;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/districtwise_party_tally.php";
-    url='./json/up.json';
+    // url='./json/up.json';
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -897,8 +898,8 @@ function getDistrictResult() {
     });
   }
   else if(state == "Pb"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.distResult;
-    url = "./json/pb.json";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.distResult;
+    // url = "./json/pb.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -919,8 +920,8 @@ function getDistrictResult() {
       $("#constituency_tbody").html(CombinedHTMLTable);
     });
   }else if(state == "Uk"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.distResult;
-    url = "./json/uk.json";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.distResult;
+    // url = "./json/uk.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
@@ -943,6 +944,7 @@ function getDistrictResult() {
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
   }
+  searchfun();
 }
 
 function searchfun() {
@@ -952,18 +954,16 @@ function searchfun() {
     filter = input.value.toUpperCase();
     table = document.getElementById("AP_Constituency");
     tr = table.getElementsByTagName("tr");
-    for (i = 1; i < tr.length; i = i + 3) {
+    for (i = 1; i < tr.length; i = i + 2) {
       td = tr[i].getElementsByTagName("td")[0];
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           tr[i].style.display = "";
           tr[i + 1].style.display = "";
-          tr[i + 2].style.display = "";
         } else {
           tr[i].style.display = "none";
           tr[i + 1].style.display = "none";
-          tr[i + 2].style.display = "none";
         }
       }
     }
@@ -980,16 +980,16 @@ function getPartyResult() {
   const tbody = document.querySelector("#AP_Constituency > tbody");
   var state = document.getElementById("mySelect").value;
   if(state == "Up"){
-    url="./json/uppartywise.json"
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.allianceWiseR;
+    // url="./json/uppartywise.json"
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.allianceWiseR;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/partywise_wonlead_total.php";
   }
   else if(state == "Pb"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.allianceWiseR;
-    url = "./json/pbpartywise.json";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.allianceWiseR;
+    // url = "./json/pbpartywise.json";
   }else if(state == "Uk"){
-    // url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.allianceWiseR;
-    url = "./json/uk-partwise.json";
+    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.allianceWiseR;
+    // url = "./json/uk-partwise.json";
   }
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
@@ -1112,17 +1112,17 @@ function getConstResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   if(state == "Up"){
-    url='./json/upconstwise.json';
-    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.constwiseR;
+    // url='./json/upconstwise.json';
+    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.constwiseR;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/statewise_const_tally.php";
   }
   else if(state == "Pb"){
-    url='./json/pbconstwise.json';
-    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.constwiseR;
+    // url='./json/pbconstwise.json';
+    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.constwiseR;
     // url = "http://65.0.40.45/web_api/website/kerala_2021/statewise_const_tally.php";
   }else if(state == "Uk"){
-    url= './json/ukconstwise.json';
-    // url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.constwiseR;
+    // url= './json/ukconstwise.json';
+    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.constwiseR;
     // url = "http://65.0.40.45/web_api/website/tamilnadu_2021/statewise_const_tally.php";
   }
   while (tbody.firstChild) {
