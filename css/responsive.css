@@ -476,6 +476,13 @@
 }
 
 @media only screen and (max-width : 660px) {
+	.col-blg{
+		background: none;
+	}
+	/* .mob{
+		border: none;
+	} */
+	
 	.select-btn {
 	width: 60%;
 	}
@@ -491,16 +498,31 @@
 	#web-ad1, #web-ad2{
 		display: block !important;
 	}
-	#mob-ad1, #mob-ad2{
+	#mob-ad1, #mob-ad2,#mob-ad3{
+		display: none !important;
+	}
+	.ad-mobile{
 		display: none !important;
 	}
 }
 
 @media only screen and (max-width: 540px){	
+	.web-border{
+		border: none !important;
+	}
+	.mob-div{
+		background: white !important;
+		border: 1px solid #B80403 !important;
+		padding: 4px !important;
+	}
+	.ad-mobile{
+		margin: 10% 0 !important;
+		display: block !important;
+	}
 	#web-ad1, #web-ad2{
 		display: none !important;
 	}
-	#mob-ad1, #mob-ad2{
+	#mob-ad1, #mob-ad2, #mob-ad3{
 		display: block !important;
 	}
 	.tally-mob{

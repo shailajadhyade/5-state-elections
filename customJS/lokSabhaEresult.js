@@ -267,10 +267,11 @@ function getLiveStateNews() {
     $("#divPlayer").attr('src' , test1);
   }else{
     // var test1 ='./images/ads/standard-side-ad-2.jpg';
-    var player=`<div id='div-gpt-ad-1646301508763-0' style='min-width: 300px; min-height: 250px;margin-top:45px;'><script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1646301508763-0'); });
-  </script>
-</div>`;
+    var player=`<div id='div-gpt-ad-1646308362127-0' style='min-width: 300px; min-height: 250px;margin-top:40px;'>
+    <script>
+      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1646308362127-0'); });
+    </script>
+  </div>`;
     $('#test-player').html(player);
     // $("#divPlayer").attr('src' , test1);
   }
@@ -883,14 +884,14 @@ function getDistrictResult() {
       var tr = "";
       var distresults = successdata.results;
       for (var i = 0; i <= distresults.length - 1; i++) {
-        tr = "<tr><td class='dist1' colspan=5> " +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></td></tr>" +
-          "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna'>" +distresults[i].bjp_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].sp_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].bsp_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].inc_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].oth_wonlead +"</td></tr>" ;
-        CombinedHTMLTable = CombinedHTMLTable + tr;
+        tr = "<tr style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>"+
+          "<tr class='district-LW'><td style='color: #05601C;margin-left:10px;border-left: 1px solid #B80403;border-bottom: 1px solid #B80403;' class='lead1'> Lead/Won </td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bjp_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].sp_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bsp_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].inc_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;border-right:1px solid #B80403;'>" +distresults[i].oth_wonlead +"</td></tr>" ;
+        CombinedHTMLTable =  CombinedHTMLTable +tr ;
       }
       $("#constituency_tbody").html(CombinedHTMLTable);
     });
@@ -906,13 +907,13 @@ function getDistrictResult() {
       var tr = "";
       var distresults = successdata.results;
       for (var i = 0; i <= distresults.length - 1; i++) {
-        tr = "<tr><td class='dist1' colspan=5> " +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></td></tr>" +
-          "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna'>" +distresults[i].inc_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].aap_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].sad_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].bjp_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].oth_wonlead +"</td></tr>" ;
+        tr = "<tr style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>" +
+          "<tr class='district-LW'><td style='color: #05601C;border-left: 1px solid #B80403;border-bottom: 1px solid #B80403;' class='lead1'> Lead/Won </td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].inc_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].aap_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].sad_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bjp_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;border-right:1px solid #B80403;'>" +distresults[i].oth_wonlead +"</td></tr>" ;
         CombinedHTMLTable = CombinedHTMLTable + tr;
       }
       $("#constituency_tbody").html(CombinedHTMLTable);
@@ -928,12 +929,12 @@ function getDistrictResult() {
       var tr = "";
       var distresults = successdata.results;
       for (var i = 0; i <= distresults.length - 1; i++) {
-        tr = "<tr><td class='dist1' colspan=5> " +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></td></tr>" +
-          "<tr><td style='color: #05601C;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna'>" +distresults[i].bjp_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].inc_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].aap_wonlead +"</td>" +
-          "<td class='edhyna'>" +distresults[i].oth_wonlead +"</td></tr>" ;
+        tr = "<tr style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=5><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>" +
+          "<tr class='district-LW'><td style='color: #05601C;border-left: 1px solid #B80403;border-bottom: 1px solid #B80403;' class='lead1'> Lead/Won </td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bjp_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].inc_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].aap_wonlead +"</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;border-right:1px solid #B80403;'>" +distresults[i].oth_wonlead +"</td></tr>" ;
         CombinedHTMLTable = CombinedHTMLTable + tr;
       }
       $("#constituency_tbody").html(CombinedHTMLTable);
@@ -1538,7 +1539,7 @@ $(document).ready(function () {
 
   setInterval(() => {
     if ($("button.dist").hasClass("clicked")) {
-      getDistrictResult();
+      // getDistrictResult();
     } else if ($("button.const").hasClass("clicked")) {
       // document.getElementById('tdSearch').value;
       getConstResult();

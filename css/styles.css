@@ -58,6 +58,27 @@ tr:nth-child(odd) {background-color: #eee;} */
 	}
   }
 
+  .districts{
+	  padding-left: 5px !important;
+  }
+
+.district-name td{
+	border: 1px solid #B80403 !important;
+	border-bottom: none !important;
+}
+.district-LW td{
+	border: 1px solid #B80403;
+	border-top: none;
+}
+.web-border{
+	border: 1px solid #B80403 !important;
+}
+
+
+/* .mob{
+	border: 1px solid #b80403 !important;
+} */
+
 .row{
 	margin-right: -7px;
 	margin-left: -7px;
@@ -306,23 +327,23 @@ button {
 }
 .edhyna{
   background-color: #F6F6F6;
-  border:1px solid #aaa4a4;
+  /* border:1px solid #aaa4a4; */
   font-size: 20px;
   font-weight: 500;
   
 }
-.dist1{
-  border-left: 5px solid #B80403 !important;
+.dist1 div{
+  border-left: 3px solid #B80403 !important;
   color: #E10605;
   font-size: 20px;
   /* font-weight: 500 !important; */
   background-color: #FFFFFF;
   text-align: initial !important;
-  padding-left: 10px !important;
-  height: 27px !important;
+  padding: 4px 10px !important;
+  height: 26px !important;
   vertical-align: inherit !important;
   /* float: left; */
-  /* margin-left: 20px; */
+  margin-left: 5px;
 }
 .stateTable{
   float: left;
