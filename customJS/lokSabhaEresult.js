@@ -802,15 +802,15 @@ function getCrntYear() {
   var state_el = document.getElementById("mySelect").value;
   if ( state_el == "Up") {
     var frame1 =
-      '<iframe title="Uttarpradesh Winners" aria-label="Map" id="datawrapper-chart-Z30ot" src="https://datawrapper.dwcdn.net/Z30ot/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
+      '<iframe title="Uttarpradesh Winners" aria-label="Map" id="datawrapper-chart-Z30ot" src="https://datawrapper.dwcdn.net/p01uu/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
     $("#iframe-state").html(frame1);
   } else if ( state_el == "Pb") {
     var frame1 =
-      '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/41N0A/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="707"></iframe>';
+      '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/xH7gO/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="707"></iframe>';
     $("#iframe-state").html(frame1);
   } else if ( state_el == "Uk") {
     var frame1 =
-      '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/I19Oa/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
+      '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/gvAQr/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
     $("#iframe-state").html(frame1);
   }
   $("button.prev-year").removeClass("clicked");
