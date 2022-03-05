@@ -1539,7 +1539,7 @@ $(document).ready(function () {
 
   setInterval(() => {
     if ($("button.dist").hasClass("clicked")) {
-      // getDistrictResult();
+      getDistrictResult();
     } else if ($("button.const").hasClass("clicked")) {
       // document.getElementById('tdSearch').value;
       getConstResult();
