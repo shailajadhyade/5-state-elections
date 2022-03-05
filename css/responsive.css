@@ -289,11 +289,44 @@
 	#Pb_data tr .lead-won, #Ga_data tr .lead-won, #Mnr_data tr .lead-won{
 		display: none;
 	}
+	#web-ad1, #web-ad2{
+		display: block !important;
+	}
+	#mob-ad1, #mob-ad2,#mob-ad3{
+		display: none !important;
+	}
+	.ad-mobile{
+		display: none !important;
+	}
 }
 @media only screen and (max-width : 991px) {
 	/* #Pb_data tr .lead-won, #Ga_data tr .lead-won, #Mnr_data tr .lead-won{
 		display: block;
 	} */
+	.choose-state{
+		text-align: center;
+	}
+	.web-border{
+		border: none !important;
+	}
+	.mob-div{
+		background: white !important;
+		border: 1px solid #B80403 !important;
+		padding: 4px !important;
+	}
+	.ad-mobile{
+		margin: 10% 0 !important;
+		display: block !important;
+	}
+	.add-blog #mob-ad2{
+		margin-bottom: -30px !important;
+	}
+	#web-ad1, #web-ad2,#web-ad3{
+		display: none !important;
+	}
+	#mob-ad1, #mob-ad2, #mob-ad3{
+		display: block !important;
+	}
 	.PB-padding-left{
 		padding-left: 0px !important;
 	}
@@ -495,7 +528,7 @@
 }
 
 @media only screen and (min-width: 540px){	
-	#web-ad1, #web-ad2{
+	/* #web-ad1, #web-ad2{
 		display: block !important;
 	}
 	#mob-ad1, #mob-ad2,#mob-ad3{
@@ -503,11 +536,11 @@
 	}
 	.ad-mobile{
 		display: none !important;
-	}
+	} */
 }
 
 @media only screen and (max-width: 540px){	
-	.web-border{
+	/* .web-border{
 		border: none !important;
 	}
 	.mob-div{
@@ -518,13 +551,13 @@
 	.ad-mobile{
 		margin: 10% 0 !important;
 		display: block !important;
-	}
-	#web-ad1, #web-ad2{
+	} */
+	/* #web-ad1, #web-ad2{
 		display: none !important;
 	}
 	#mob-ad1, #mob-ad2, #mob-ad3{
 		display: block !important;
-	}
+	} */
 	.tally-mob{
 		padding-right: 2px !important;
 	}

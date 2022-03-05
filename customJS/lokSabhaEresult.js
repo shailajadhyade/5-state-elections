@@ -1497,14 +1497,14 @@ function pbElectionBanner() {
 function selectState(){
   var state_el = document.getElementById("mySelect").value;
   if (state_el == "Up"){
-    document.getElementById("state-name").innerHTML = "UTTARPRADESH";
+    // document.getElementById("state-name").innerHTML = "UTTARPRADESH";
     upElectionBanner();
  
   }else if( state_el == "Pb"){
-    document.getElementById("state-name").innerHTML = "PUNJAB";
+    // document.getElementById("state-name").innerHTML = "PUNJAB";
     pbElectionBanner()
   }else if( state_el == "Uk"){
-    document.getElementById("state-name").innerHTML = "UTTARAKHAND";
+    // document.getElementById("state-name").innerHTML = "UTTARAKHAND";
     ukElectionBanner();
   }
   

@@ -1753,7 +1753,9 @@ td.won-blog p {
   margin-bottom: 0px;
   border-top: 1px solid #cccccc;
 }
-
+.choose-state{
+	text-align: right;
+}
 .search-bar input {
 	width: 80%;
 }
