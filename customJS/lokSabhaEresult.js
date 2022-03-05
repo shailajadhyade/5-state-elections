@@ -943,6 +943,7 @@ function getDistrictResult() {
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
   }
+  searchfun();
 }
 
 function searchfun() {
@@ -952,18 +953,16 @@ function searchfun() {
     filter = input.value.toUpperCase();
     table = document.getElementById("AP_Constituency");
     tr = table.getElementsByTagName("tr");
-    for (i = 1; i < tr.length; i = i + 3) {
+    for (i = 1; i < tr.length; i = i + 2) {
       td = tr[i].getElementsByTagName("td")[0];
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           tr[i].style.display = "";
           tr[i + 1].style.display = "";
-          tr[i + 2].style.display = "";
         } else {
           tr[i].style.display = "none";
           tr[i + 1].style.display = "none";
-          tr[i + 2].style.display = "none";
         }
       }
     }
