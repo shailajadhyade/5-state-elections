@@ -908,7 +908,7 @@ function getDistrictResult() {
       var tr = "";
       var distresults = successdata.results;
       for (var i = 0; i <= distresults.length - 1; i++) {
-        tr = "<tr style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>" +
+        tr = "<tr class='searchnone' style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>" +
           "<tr class='district-LW'><td style='color: #05601C;border-left: 1px solid #B80403;border-bottom: 1px solid #B80403;' class='lead1'> Lead/Won </td>" +
           "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].inc_wonlead +"</td>" +
           "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].aap_wonlead +"</td>" +
@@ -930,7 +930,7 @@ function getDistrictResult() {
       var tr = "";
       var distresults = successdata.results;
       for (var i = 0; i <= distresults.length - 1; i++) {
-        tr = "<tr style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=5><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>" +
+        tr = "<tr class='searchnone' style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=5><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>" +
           "<tr class='district-LW'><td style='color: #05601C;border-left: 1px solid #B80403;border-bottom: 1px solid #B80403;' class='lead1'> Lead/Won </td>" +
           "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bjp_wonlead +"</td>" +
           "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].inc_wonlead +"</td>" +
