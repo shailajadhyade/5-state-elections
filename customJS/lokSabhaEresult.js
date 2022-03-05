@@ -885,7 +885,7 @@ function getDistrictResult() {
       var tr = "";
       var distresults = successdata.results;
       for (var i = 0; i <= distresults.length - 1; i++) {
-        tr = "<tr style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>"+
+        tr = "<tr class='searchnone' style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>"+
           "<tr class='district-LW'><td style='color: #05601C;margin-left:10px;border-left: 1px solid #B80403;border-bottom: 1px solid #B80403;' class='lead1'> Lead/Won </td>" +
           "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bjp_wonlead +"</td>" +
           "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].sp_wonlead +"</td>" +
@@ -954,17 +954,20 @@ function searchfun() {
     filter = input.value.toUpperCase();
     table = document.getElementById("AP_Constituency");
     tr = table.getElementsByTagName("tr");
-    for (i = 1; i < tr.length; i = i + 2) {
+    for (i = 2; i < tr.length; i = i + 3) {
       td = tr[i].getElementsByTagName("td")[0];
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           tr[i].style.display = "";
           tr[i + 1].style.display = "";
+          tr[i + 1].style.display = "";
         } else {
           tr[i].style.display = "none";
           tr[i + 1].style.display = "none";
+          tr[i + 1].style.display = "none";
         }
+        $('.searchnone').addClass('displaynone');
       }
     }
   });
