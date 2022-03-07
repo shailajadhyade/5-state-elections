@@ -116,7 +116,7 @@ tr:nth-child(odd) {background-color: #eee;} */
 #mySelect{
 	height: 40px; 
 	width: 200px; 
-	margin-top: 18px; 
+	margin-top: 10px; 
 	background-color: #B80403; 
 	color: white;
 	border-radius: 5% #B80403;
@@ -1755,6 +1755,7 @@ td.won-blog p {
 }
 .choose-state{
 	text-align: right;
+	font-size: 20px;
 }
 .search-bar input {
 	width: 80%;

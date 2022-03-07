@@ -540,6 +540,13 @@
 }
 
 @media only screen and (max-width: 540px){	
+	#mySelect{
+		width: 180px !important;
+		margin-top: 15px !important;
+	}
+	.choose-state{
+		font-size: 18px !important;
+	}
 	/* .web-border{
 		border: none !important;
 	}
@@ -677,6 +684,13 @@
 	}
 	.lead-win{
 		font-size: 14px;
+	}
+	#mySelect{
+		font-size: 17px !important;
+		width: 170px !important;
+	}
+	.choose-state{
+		font-size: 16px !important;
 	}
 }
 @media only screen and (max-width: 281px){
