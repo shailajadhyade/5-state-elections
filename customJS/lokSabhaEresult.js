@@ -262,7 +262,8 @@ function getLiveStateNews() {
     $('#test-player').html(player);
     $("#divPlayer").attr('src' , test1);
   }else if( national == "punjabi"){
-    var test1 ='https://dgt6f5s87pgbo.cloudfront.net/out/v1/dd6e383c67c44d20a41a358679edd9c7/ETVB_CF_JK_Live3.m3u8';
+    var test1 = 'https://d5kr2u5kstlj5.cloudfront.net/out/v1/5f05ee8522374d38b84c14ae8a6e4cfe/ETVB_CF_JK_Live2.m3u8';
+    // var test1 ='https://dgt6f5s87pgbo.cloudfront.net/out/v1/dd6e383c67c44d20a41a358679edd9c7/ETVB_CF_JK_Live3.m3u8';
     var player='<iframe style="width:100%; margin-top:20px; height:300px;" id="live-player" class="liveplayer" allowfullscreen="true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl='+test1+'&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true"></iframe>';
     $('#test-player').html(player);
     $("#divPlayer").attr('src' , test1);
@@ -1071,6 +1072,10 @@ function getPartyResult() {
         }
     }
     function getallianceParties(results, alliance_name){
+     
+      var count = results.filter(function(o) {return o['alliance_name'] ==alliance_name}).length
+      console.log(count)
+    if(count>1){
       for (var j = 0; j <= results.length - 1; j++) {
         if (results[j]["alliance_name"] == alliance_name) {
           tr =
@@ -1091,6 +1096,7 @@ function getPartyResult() {
           CombinedHTMLTable = CombinedHTMLTable + tr;
         }
       }
+    }
     }
     CombinedHTMLTable =CombinedHTMLTable +other
     $("#constituency_tbody").html(CombinedHTMLTable);
