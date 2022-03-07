@@ -299,12 +299,12 @@ function getVipResult() {
   // debugger;
   const tbody = document.querySelector("#AP_Constituency > tbody");
   if(state == "Up"){
-    url = "./elections/json/vip.json";
+    url = "/elections/json/vip.json";
   }
   else if(state == "Pb"){
-    url = "./elections/json/vip.json";
+    url = "/elections/json/vip.json";
   }else if(state == "Uk"){
-    url = "./elections/json/vip.json";
+    url = "/elections/json/vip.json";
   }
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
