@@ -1531,7 +1531,7 @@ $(document).ready(function () {
 
   // bannerAdd();
   setInterval(() => {
-    // electionResults();
+    electionResults();
   }, 30000);
 
   getDistrictResult();
