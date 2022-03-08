@@ -30,22 +30,22 @@ var appData = {
       uttarpradesh: {
         distResult: "uttarpradesh_2022/districtwise_party_tally.php",
         constwiseR: "uttarpradesh_2022/statewise_const_tally.php",
-        allianceWiseR: "uttarpradesh_2022/partywise_wonlead_total.php", 
+        allianceWiseR: "uttarpradesh_2022/partywise_wonlead_total.php",
         viplistup: "uttarpradesh_2022/vipcandidates_wonlead.php",
       },
       uttarakhand: {
         distResult: "uttarakhand_2022/districtwise_party_tally.php",
         constwiseR: "uttarakhand_2022/statewise_const_tally.php",
-        allianceWiseR: "uttarakhand_2022/partywise_wonlead_total.php", 
+        allianceWiseR: "uttarakhand_2022/partywise_wonlead_total.php",
         viplistup: "uttarakhand_2022/vipcandidates_wonlead.php",
       },
       punjab: {
         distResult: "punjab_2022/districtwise_party_tally.php",
         constwiseR: "punjab_2022/statewise_const_tally.php",
-        allianceWiseR: "punjab_2022/partywise_wonlead_total.php", 
+        allianceWiseR: "punjab_2022/partywise_wonlead_total.php",
         viplistup: "punjab_2022/vipcandidates_wonlead.php",
       },
-     
+
       // partyWiseResults: "partywise_wonlead_total.php?language=english",
       // ndaResults: "partywise_wonlead_total_sf.php?language=english",
       // mgbResults: "partywise_wonlead_total_tf.php?language=english",
@@ -71,125 +71,125 @@ function getJSON(url, successCallback) {
 //   var lang = temp[4];
 //   national = "hindi";
 //   var lang = "kerala";
-  // var lang_state = temp
-  // var lang = "national";
-  // var national = "urdu";
+// var lang_state = temp
+// var lang = "national";
+// var national = "urdu";
 
-  // var stremingURLs = {
-  //   "andhra-pradesh":
-  //     "https://d1lqvjyfwvyj07.cloudfront.net/out/v1/d54651fa806648719a92727a661fa0d0/ETVB_CF_AP_NewsTime.m3u8",
-  //   assam:
-  //     "https://etvbharatlive8.akamaized.net/hls/live/710674/assam/index.m3u8",
-  //   bihar:
-  //     "https://etvbharatlive3.akamaized.net/hls/live/710666/bihar/index.m3u8",
-  //   chhattisgarh:
-  //     "https://d2lkimnyxc1ji8.cloudfront.net/out/v1/cadefd8c8bff49d4a3ef38c1b3bf6a31/ETVB_CF_CG_NewsTime.m3u8",
-  //   delhi:
-  //     "https://d29q6tdfij96f1.cloudfront.net/out/v1/94b12003316c4d6c9721a1508b0d1bac/ETVB_CF_DL_NewsTime.m3u8",
-  //   gujarat:
-  //     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/04fee298badd4ea087aa4b68f4a8c034/ETVB_BG_GJ_NewsTime.m3u8",
-  //   haryana:
-  //     "https://d3ejgzjh1qxqqq.cloudfront.net/out/v1/6d44b1b671d548a6bc95edea325b8413/ETVB_CF_HR_NewsTime.m3u8",
-  //   "himachal-pradesh":
-  //     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/a64cd2ff63e14792a4783b6d458ed5ab/ETVB_BG_HP_NewsTime.m3u8",
-  //   jharkhand:
-  //     "https://etvbharatlive2.akamaized.net/hls/live/710296/jharkhand/index.m3u8",
-  //   "jammu-and-kashmir":
-  //     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/baf7abc4aceb441abe16f4d636fb80cc/ETVB_BG_UR_NewsTime.m3u8",
-  //   karnataka:
-  //     "https://etvbharatlive5.akamaized.net/hls/live/710671/kannada/index.m3u8",
-  //   kerala:
-  //     "https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8",
-  //   maharashtra:
-  //     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/bd4b06bb4ff24d938c3942ee89b1126d/ETVB_BG_MH_NewsTime.m3u8",
-  //   "madhya-pradesh":
-  //     "https://d1i5fpe095d43k.cloudfront.net/out/v1/16a901263bf7402e9cb7ff4b94fa5bfd/ETVB_CF_MP_NewsTime.m3u8",
-  //   english:
-  //     "https://d5i7xalz199bi.cloudfront.net/out/v1/770fb77abc5d4ef487fc8b8b38d60510/ETVB_CF_EN_NewsTime.m3u8",
-  //   urdu: "https://etvbharat.pc.cdn.bitgravity.com/out/v1/baf7abc4aceb441abe16f4d636fb80cc/ETVB_BG_UR_NewsTime.m3u8",
-  //   odisha:
-  //     "https://etvbharatlive.akamaized.net/hls/live/707618/odisha/index.m3u8",
-  //   punjab:
-  //     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/68eee6155d904f199aad20af043f9003/ETVB_BG_PB_NewsTime.m3u8",
-  //   rajasthan:
-  //     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/0703d0f945c64e15aef72cd11fd54668/ETVB_BG_RJ_NewsTime.m3u8",
-  //   "tamil-nadu":
-  //     "https://dfae28bzu51al.cloudfront.net/out/v1/ee7ba7ef70fc4005a3992a2c0e8336aa/ETVB_CF_TN_NewsTime.m3u8",
-  //   telangana:
-  //     "https://d1q8rg3smbsux8.cloudfront.net/out/v1/c7849afc704b478fb86a9e2caac3854a/ETVB_CF_TS_NewsTime.m3u8",
-  //   "uttar-pradesh":
-  //     "https://etvbharatlive6.akamaized.net/hls/live/710672/uttarPradesh/index.m3u8",
-  //   uttarakhand:
-  //     "https://etvbharatlive1.akamaized.net/hls/live/710294/uttarakhand/index.m3u8",
-  //   "west-bengal":
-  //     "https://etvbharatlive9.akamaized.net/hls/live/710675/westBengal/index.m3u8",
-  // };
-  // if (national == "hindi"){
+// var stremingURLs = {
+//   "andhra-pradesh":
+//     "https://d1lqvjyfwvyj07.cloudfront.net/out/v1/d54651fa806648719a92727a661fa0d0/ETVB_CF_AP_NewsTime.m3u8",
+//   assam:
+//     "https://etvbharatlive8.akamaized.net/hls/live/710674/assam/index.m3u8",
+//   bihar:
+//     "https://etvbharatlive3.akamaized.net/hls/live/710666/bihar/index.m3u8",
+//   chhattisgarh:
+//     "https://d2lkimnyxc1ji8.cloudfront.net/out/v1/cadefd8c8bff49d4a3ef38c1b3bf6a31/ETVB_CF_CG_NewsTime.m3u8",
+//   delhi:
+//     "https://d29q6tdfij96f1.cloudfront.net/out/v1/94b12003316c4d6c9721a1508b0d1bac/ETVB_CF_DL_NewsTime.m3u8",
+//   gujarat:
+//     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/04fee298badd4ea087aa4b68f4a8c034/ETVB_BG_GJ_NewsTime.m3u8",
+//   haryana:
+//     "https://d3ejgzjh1qxqqq.cloudfront.net/out/v1/6d44b1b671d548a6bc95edea325b8413/ETVB_CF_HR_NewsTime.m3u8",
+//   "himachal-pradesh":
+//     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/a64cd2ff63e14792a4783b6d458ed5ab/ETVB_BG_HP_NewsTime.m3u8",
+//   jharkhand:
+//     "https://etvbharatlive2.akamaized.net/hls/live/710296/jharkhand/index.m3u8",
+//   "jammu-and-kashmir":
+//     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/baf7abc4aceb441abe16f4d636fb80cc/ETVB_BG_UR_NewsTime.m3u8",
+//   karnataka:
+//     "https://etvbharatlive5.akamaized.net/hls/live/710671/kannada/index.m3u8",
+//   kerala:
+//     "https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8",
+//   maharashtra:
+//     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/bd4b06bb4ff24d938c3942ee89b1126d/ETVB_BG_MH_NewsTime.m3u8",
+//   "madhya-pradesh":
+//     "https://d1i5fpe095d43k.cloudfront.net/out/v1/16a901263bf7402e9cb7ff4b94fa5bfd/ETVB_CF_MP_NewsTime.m3u8",
+//   english:
+//     "https://d5i7xalz199bi.cloudfront.net/out/v1/770fb77abc5d4ef487fc8b8b38d60510/ETVB_CF_EN_NewsTime.m3u8",
+//   urdu: "https://etvbharat.pc.cdn.bitgravity.com/out/v1/baf7abc4aceb441abe16f4d636fb80cc/ETVB_BG_UR_NewsTime.m3u8",
+//   odisha:
+//     "https://etvbharatlive.akamaized.net/hls/live/707618/odisha/index.m3u8",
+//   punjab:
+//     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/68eee6155d904f199aad20af043f9003/ETVB_BG_PB_NewsTime.m3u8",
+//   rajasthan:
+//     "https://etvbharat.pc.cdn.bitgravity.com/out/v1/0703d0f945c64e15aef72cd11fd54668/ETVB_BG_RJ_NewsTime.m3u8",
+//   "tamil-nadu":
+//     "https://dfae28bzu51al.cloudfront.net/out/v1/ee7ba7ef70fc4005a3992a2c0e8336aa/ETVB_CF_TN_NewsTime.m3u8",
+//   telangana:
+//     "https://d1q8rg3smbsux8.cloudfront.net/out/v1/c7849afc704b478fb86a9e2caac3854a/ETVB_CF_TS_NewsTime.m3u8",
+//   "uttar-pradesh":
+//     "https://etvbharatlive6.akamaized.net/hls/live/710672/uttarPradesh/index.m3u8",
+//   uttarakhand:
+//     "https://etvbharatlive1.akamaized.net/hls/live/710294/uttarakhand/index.m3u8",
+//   "west-bengal":
+//     "https://etvbharatlive9.akamaized.net/hls/live/710675/westBengal/index.m3u8",
+// };
+// if (national == "hindi"){
 
-  // }
-  // if (lang == "assam") {
-  //   var url = stremingURLs[lang.toLowerCase()];
-  //   // if (url) assamElection();
-  //   // document.getElementById("state-name").innerHTML = "ASSAM";
+// }
+// if (lang == "assam") {
+//   var url = stremingURLs[lang.toLowerCase()];
+//   // if (url) assamElection();
+//   // document.getElementById("state-name").innerHTML = "ASSAM";
 
-  //   $(".btn-list").hide();
-  //   $(".btn-list1").show();
-  //   $("#other-states").show();
-  //   $("#election-state").show();
-  //   $("#tamil-vip").hide();
-  //   $("#state-name1").hide();
+//   $(".btn-list").hide();
+//   $(".btn-list1").show();
+//   $("#other-states").show();
+//   $("#election-state").show();
+//   $("#tamil-vip").hide();
+//   $("#state-name1").hide();
 
-  //   return url;
-  // } else if (lang == "west-bengal") {
-  //   var url = stremingURLs[lang.toLowerCase()];
-  //   // if (url) westBengalElection();
-  //   // document.getElementById("state-name").innerHTML = "WEST BENGAL";
-  //   $(".btn-list").hide();
-  //   $(".btn-list1").show();
-  //   $("#other-states").show();
-  //   $("#tamil-vip").hide();
-  //   $("#election-state").show();
-  //   $("#state-name1").hide();
+//   return url;
+// } else if (lang == "west-bengal") {
+//   var url = stremingURLs[lang.toLowerCase()];
+//   // if (url) westBengalElection();
+//   // document.getElementById("state-name").innerHTML = "WEST BENGAL";
+//   $(".btn-list").hide();
+//   $(".btn-list1").show();
+//   $("#other-states").show();
+//   $("#tamil-vip").hide();
+//   $("#election-state").show();
+//   $("#state-name1").hide();
 
-  //   return url;
-  // } else if (lang == "tamil-nadu") {
-  //   var url = stremingURLs[lang.toLowerCase()];
-  //   if (url) {
-  //     // document.getElementById("state-name").innerHTML = "TAMILNADU";
-  //     $("#other-states").show();
-  //     $("#election-state").show();
-  //     $("#tamil-vip").show();
-  //     $("#state-name1").show();
+//   return url;
+// } else if (lang == "tamil-nadu") {
+//   var url = stremingURLs[lang.toLowerCase()];
+//   if (url) {
+//     // document.getElementById("state-name").innerHTML = "TAMILNADU";
+//     $("#other-states").show();
+//     $("#election-state").show();
+//     $("#tamil-vip").show();
+//     $("#state-name1").show();
 
-  //     // tamilnaduElection();
-  //     return url;
-  //   }
-  // } else if (lang == "kerala") {
-  //   var url = stremingURLs[lang.toLowerCase()];
-  //   // if (url) keralaElection();
-  //   // document.getElementById("state-name").innerHTML = "KERALA";
-  //   $("#other-states").show();
-  //   $("#election-state").show();
-  //   $("#tamil-vip").hide();
-  //   $("#state-name1").hide();
-  //   return url;
-  // } else if (lang == "national") {
-  //   // var url = stremingURLs[lang.toLowerCase()];
-  //   if (national == "urdu") {
-  //     var url = stremingURLs[national.toLowerCase()];
-  //     return url;
-  //   } else if (national == "english") {
-  //     var url = stremingURLs[national.toLowerCase()];
-  //     return url;
-  //   }
-  // } else if (lang) {
-  //   var url = stremingURLs[lang.toLowerCase()];
-  //   if (url) return url;
-  //   // console.log(url);
-  //   // electionResults();
-  // }
+//     // tamilnaduElection();
+//     return url;
+//   }
+// } else if (lang == "kerala") {
+//   var url = stremingURLs[lang.toLowerCase()];
+//   // if (url) keralaElection();
+//   // document.getElementById("state-name").innerHTML = "KERALA";
+//   $("#other-states").show();
+//   $("#election-state").show();
+//   $("#tamil-vip").hide();
+//   $("#state-name1").hide();
+//   return url;
+// } else if (lang == "national") {
+//   // var url = stremingURLs[lang.toLowerCase()];
+//   if (national == "urdu") {
+//     var url = stremingURLs[national.toLowerCase()];
+//     return url;
+//   } else if (national == "english") {
+//     var url = stremingURLs[national.toLowerCase()];
+//     return url;
+//   }
+// } else if (lang) {
+//   var url = stremingURLs[lang.toLowerCase()];
+//   if (url) return url;
+//   // console.log(url);
+//   // electionResults();
+// }
 
-  // return stremingURLs["assam"];
+// return stremingURLs["assam"];
 // }
 
 function getLanguageState(value, stateDdlID) {
@@ -256,20 +256,20 @@ function getLiveStateNews() {
   var temp = parentURL.split("/");
   // var lang = temp[4];
   national = "hindi";
-  if( national == "hindi" || national == "english"){
-    var test1 ='https://dgt6f5s87pgbo.cloudfront.net/out/v1/dd6e383c67c44d20a41a358679edd9c7/ETVB_CF_JK_Live3.m3u8';
-    var player='<iframe style="width:100%; margin-top:20px; height:300px;" id="live-player" class="liveplayer" allowfullscreen="true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl='+test1+'&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true"></iframe>';
+  if (national == "hindi" || national == "english") {
+    var test1 = 'https://dgt6f5s87pgbo.cloudfront.net/out/v1/dd6e383c67c44d20a41a358679edd9c7/ETVB_CF_JK_Live3.m3u8';
+    var player = '<iframe style="width:100%; margin-top:20px; height:300px;" id="live-player" class="liveplayer" allowfullscreen="true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=' + test1 + '&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true"></iframe>';
     $('#test-player').html(player);
-    $("#divPlayer").attr('src' , test1);
-  }else if( national == "punjabi"){
+    $("#divPlayer").attr('src', test1);
+  } else if (national == "punjabi") {
     var test1 = 'https://d5kr2u5kstlj5.cloudfront.net/out/v1/5f05ee8522374d38b84c14ae8a6e4cfe/ETVB_CF_JK_Live2.m3u8';
     // var test1 ='https://dgt6f5s87pgbo.cloudfront.net/out/v1/dd6e383c67c44d20a41a358679edd9c7/ETVB_CF_JK_Live3.m3u8';
-    var player='<iframe style="width:100%; margin-top:20px; height:300px;" id="live-player" class="liveplayer" allowfullscreen="true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl='+test1+'&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true"></iframe>';
+    var player = '<iframe style="width:100%; margin-top:20px; height:300px;" id="live-player" class="liveplayer" allowfullscreen="true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=' + test1 + '&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true"></iframe>';
     $('#test-player').html(player);
-    $("#divPlayer").attr('src' , test1);
-  }else{
+    $("#divPlayer").attr('src', test1);
+  } else {
     // var test1 ='./images/ads/standard-side-ad-2.jpg';
-    var player=`<div id='div-gpt-ad-1646308362127-0' style='min-width: 300px; min-height: 250px;margin-top:40px;'>
+    var player = `<div id='div-gpt-ad-1646308362127-0' style='min-width: 300px; min-height: 250px;margin-top:40px;'>
     <script>
       googletag.cmd.push(function() { googletag.display('div-gpt-ad-1646308362127-0'); });
     </script>
@@ -299,12 +299,12 @@ function getVipResult() {
   var state = document.getElementById("mySelect").value;
   // debugger;
   const tbody = document.querySelector("#AP_Constituency > tbody");
-  if(state == "Up"){
+  if (state == "Up") {
     url = "/elections/json/vip.json";
   }
-  else if(state == "Pb"){
+  else if (state == "Pb") {
     url = "/elections/json/vip.json";
-  }else if(state == "Uk"){
+  } else if (state == "Uk") {
     url = "/elections/json/vip.json";
   }
   while (tbody.firstChild) {
@@ -702,37 +702,37 @@ function callTallyEveryMinute() {
 // (above table) five state tally
 
 function fiveStateTally(CombineTable, theadh, state) {
-  var t="";
-  for(i=0;i<theadh.length;i++){
-    theadh[i]= theadh[i]==="OTHERS"? "OTH": theadh[i];
-    t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div width='100'>" +theadh[i] +"</div></th>";
+  var t = "";
+  for (i = 0; i < theadh.length; i++) {
+    theadh[i] = theadh[i] === "OTHERS" ? "OTH" : theadh[i];
+    t = t + "<th class='tdata2' style='background: #B80403;font-weight: 700;'><div width='100'>" + theadh[i] + "</div></th>";
   }
-  CombineTable = "<tr><th class='lead-won' style='background: #B80403;'><div> </div></th>"+t + "</tr><tr>" + "<td class='lead-won' style='font-weight: 700;'>Lead/won</td>"+CombineTable + "</tr>";
-  if(state==="UP"){
+  CombineTable = "<tr><th class='lead-won' style='background: #B80403;'><div> </div></th>" + t + "</tr><tr>" + "<td class='lead-won' style='font-weight: 700;'>Lead/won</td>" + CombineTable + "</tr>";
+  if (state === "UP") {
     $("#Up_data").html(CombineTable);
-  }else if(state === "PB"){
+  } else if (state === "PB") {
     $("#Pb_data").html(CombineTable);
-  }else if(state === "UK"){
+  } else if (state === "UK") {
     $("#Uk_data").html(CombineTable);
-  }else if(state==="MNP"){
+  } else if (state === "MNP") {
     $("#Mnr_data").html(CombineTable);
-  }else if(state === "GA"){
+  } else if (state === "GA") {
     $("#Ga_data").html(CombineTable);
   }
 }
 
 function electionResults() {
 
-  var url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.state5tally;
+  var url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.state5tally;
   // var url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/five_states_common_tally.php";
   // var url='/elections/json/kerala.json';
-  var arr=[],totaltally=[];
-  var results=[];
+  var arr = [], totaltally = [];
+  var results = [];
   getJSON(url, function (response) {
-    for(var i=0;i<response.totalresults.length;i++){
-      if(!response.totalresults[i].party_name) {
-          arr.push(response.totalresults[i].state_id);
-          totaltally.push(response.totalresults[i].total_seats)
+    for (var i = 0; i < response.totalresults.length; i++) {
+      if (!response.totalresults[i].party_name) {
+        arr.push(response.totalresults[i].state_id);
+        totaltally.push(response.totalresults[i].total_seats)
       }
     }
     for (var j = 0; j < arr.length; j++) {
@@ -743,9 +743,9 @@ function electionResults() {
       for (i = 0; i < response.totalresults.length; i++) {
         if (response.totalresults[i].state_id == arr[j] && response.totalresults[i].party_name) {
           theadh.push(response.totalresults[i].party_name);
-           trf = "<td class='td-style'>" + response.totalresults[i].total + "</td>";
+          trf = "<td class='td-style'>" + response.totalresults[i].total + "</td>";
           CombineTable = CombineTable + trf;
-        }else if (response.totalresults[i].total_seats == totaltally[j]) {
+        } else if (response.totalresults[i].total_seats == totaltally[j]) {
           var countTally = response.totalresults[i].total_count;
           var totalTally = response.totalresults[i].total_seats;
           var westTotal = countTally + "/" + totalTally;
@@ -756,17 +756,17 @@ function electionResults() {
         fiveStateTally(CombineTable, theadh, "UP");
       } else if (arr[j] == "35") {
         $("#UkTotal").html(westTotal);
-        fiveStateTally(CombineTable, theadh,"UK");
+        fiveStateTally(CombineTable, theadh, "UK");
       } else if (arr[j] == "11") {
         $("#tamilTotal").html(westTotal);
-        fiveStateTally(CombineTable, theadh,"GA");
+        fiveStateTally(CombineTable, theadh, "GA");
       } else if (arr[j] == "22") {
         $("#keralaTotal").html(westTotal);
-        fiveStateTally(CombineTable, theadh,"MNP");
+        fiveStateTally(CombineTable, theadh, "MNP");
       } else if (arr[j] == "28") {
         $("#PbTotal").html(westTotal);
         fiveStateTally(CombineTable, theadh, "PB");
-      } 
+      }
     }
   });
 }
@@ -776,15 +776,15 @@ function electionResults() {
 function getPrevYear() {
   // $("#previous-year").click(function(){
   var state_el = document.getElementById("mySelect").value;
-  if ( state_el == "Up") {
+  if (state_el == "Up") {
     var frame1 =
       '<iframe title="Uttarpradesh Winners" aria-label="Map" id="datawrapper-chart-Z30ot" src="https://datawrapper.dwcdn.net/Z30ot/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
     $("#iframe-state").html(frame1);
-  } else if ( state_el == "Pb") {
+  } else if (state_el == "Pb") {
     var frame1 =
       '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/41N0A/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="707"></iframe>';
     $("#iframe-state").html(frame1);
-  } else if ( state_el == "Uk") {
+  } else if (state_el == "Uk") {
     var frame1 =
       '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/I19Oa/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
     $("#iframe-state").html(frame1);
@@ -802,15 +802,15 @@ function getPrevYear() {
 function getCrntYear() {
   // $("#current-year").click(function(){
   var state_el = document.getElementById("mySelect").value;
-  if ( state_el == "Up") {
+  if (state_el == "Up") {
     var frame1 =
       '<iframe title="Uttarpradesh Winners" aria-label="Map" id="datawrapper-chart-Z30ot" src="https://datawrapper.dwcdn.net/p01uu/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="683"></iframe>';
     $("#iframe-state").html(frame1);
-  } else if ( state_el == "Pb") {
+  } else if (state_el == "Pb") {
     var frame1 =
       '<iframe title="Punjab Winners" aria-label="Map" id="datawrapper-chart-41N0A" src="https://datawrapper.dwcdn.net/xH7gO/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="707"></iframe>';
     $("#iframe-state").html(frame1);
-  } else if ( state_el == "Uk") {
+  } else if (state_el == "Uk") {
     var frame1 =
       '<iframe title="Uttarakhand Winners" aria-label="Map" id="datawrapper-chart-I19Oa" src="https://datawrapper.dwcdn.net/gvAQr/" scrolling="no" frameborder="0" style="border: none;" width="100%" height="583"></iframe>';
     $("#iframe-state").html(frame1);
@@ -826,9 +826,9 @@ function getCrntYear() {
 
 
 // state wise District result results display (below tables)
-function partiesDisplay(parties){
-  for(var key in parties){
-   var thead = thead+"<th class='wb1'>" +parties[key] +"</th>";
+function partiesDisplay(parties) {
+  for (var key in parties) {
+    var thead = thead + "<th class='wb1'>" + parties[key] + "</th>";
   }
   return thead;
 }
@@ -842,7 +842,7 @@ function upHead() {
   };
   return partiesDisplay(parties);
 }
-function pbHead(){
+function pbHead() {
   var parties = {
     a: "INC",
     b: "AAP",
@@ -852,7 +852,7 @@ function pbHead(){
   };
   return partiesDisplay(parties);
 }
-function ukHead(){
+function ukHead() {
   var parties = {
     a: "BJP",
     b: "INC",
@@ -874,32 +874,32 @@ function getDistrictResult() {
   const tbody = document.querySelector("#AP_Constituency > tbody");
   var state = document.getElementById("mySelect").value;
   // debugger;
-  if(state == "Up"){
-    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.distResult;
+  if (state == "Up") {
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.distResult;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/districtwise_party_tally.php";
     // url='./json/up.json';
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
       var thead = "";
-      thead = "<tr>" + "<th class='table-h'></th>" + upHead()+"</tr>";
+      thead = "<tr>" + "<th class='table-h'></th>" + upHead() + "</tr>";
       CombinedHTMLTable = CombinedHTMLTable + thead;
       var tr = "";
       var distresults = successdata.results;
       for (var i = 0; i <= distresults.length - 1; i++) {
-        tr = "<tr class='searchnone' style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>"+
+        tr = "<tr class='searchnone' style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" + distresults[i].dist_name + "<span>&nbsp;&nbsp;(" + distresults[i].count_seats + "/" + distresults[i].total_seats + ")</span></div></td></tr>" +
           "<tr class='district-LW'><td style='color: #05601C;margin-left:10px;border-left: 1px solid #B80403;border-bottom: 1px solid #B80403;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bjp_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].sp_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bsp_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].inc_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;border-right:1px solid #B80403;'>" +distresults[i].oth_wonlead +"</td></tr>" ;
-        CombinedHTMLTable =  CombinedHTMLTable +tr ;
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].bjp_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].sp_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].bsp_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].inc_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;border-right:1px solid #B80403;'>" + distresults[i].oth_wonlead + "</td></tr>";
+        CombinedHTMLTable = CombinedHTMLTable + tr;
       }
       $("#constituency_tbody").html(CombinedHTMLTable);
     });
   }
-  else if(state == "Pb"){
-    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.distResult;
+  else if (state == "Pb") {
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.distResult;
     // url = "./json/pb.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
@@ -909,19 +909,19 @@ function getDistrictResult() {
       var tr = "";
       var distresults = successdata.results;
       for (var i = 0; i <= distresults.length - 1; i++) {
-        tr = "<tr class='searchnone' style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>" +
+        tr = "<tr class='searchnone' style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=6><div>" + distresults[i].dist_name + "<span>&nbsp;&nbsp;(" + distresults[i].count_seats + "/" + distresults[i].total_seats + ")</span></div></td></tr>" +
           "<tr class='district-LW'><td style='color: #05601C;border-left: 1px solid #B80403;border-bottom: 1px solid #B80403;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].inc_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].aap_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].sad_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bjp_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;border-right:1px solid #B80403;'>" +distresults[i].oth_wonlead +"</td></tr>" ;
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].inc_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].aap_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].sad_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].bjp_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;border-right:1px solid #B80403;'>" + distresults[i].oth_wonlead + "</td></tr>";
         CombinedHTMLTable = CombinedHTMLTable + tr;
       }
       $("#constituency_tbody").html(CombinedHTMLTable);
     });
-  }else if(state == "Uk"){
-    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.distResult;
+  } else if (state == "Uk") {
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.distResult;
     // url = "./json/uk.json";
     $.getJSON(url, function (successdata) {
       CombinedHTMLTable = "";
@@ -931,12 +931,12 @@ function getDistrictResult() {
       var tr = "";
       var distresults = successdata.results;
       for (var i = 0; i <= distresults.length - 1; i++) {
-        tr = "<tr class='searchnone' style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=5><div>" +distresults[i].dist_name +"<span>&nbsp;&nbsp;(" +distresults[i].count_seats + "/" +distresults[i].total_seats +")</span></div></td></tr>" +
+        tr = "<tr class='searchnone' style='border:none;height:10px;'></tr><tr class='district-name'><td class='dist1' colspan=5><div>" + distresults[i].dist_name + "<span>&nbsp;&nbsp;(" + distresults[i].count_seats + "/" + distresults[i].total_seats + ")</span></div></td></tr>" +
           "<tr class='district-LW'><td style='color: #05601C;border-left: 1px solid #B80403;border-bottom: 1px solid #B80403;' class='lead1'> Lead/Won </td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].bjp_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].inc_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" +distresults[i].aap_wonlead +"</td>" +
-          "<td class='edhyna' style='border-bottom:1px solid #B80403;border-right:1px solid #B80403;'>" +distresults[i].oth_wonlead +"</td></tr>" ;
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].bjp_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].inc_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;'>" + distresults[i].aap_wonlead + "</td>" +
+          "<td class='edhyna' style='border-bottom:1px solid #B80403;border-right:1px solid #B80403;'>" + distresults[i].oth_wonlead + "</td></tr>";
         CombinedHTMLTable = CombinedHTMLTable + tr;
       }
       $("#constituency_tbody").html(CombinedHTMLTable);
@@ -980,19 +980,19 @@ function getPartyResult() {
   $("#const-table").hide();
   $("#tdSearch").show();
   $("#tdSearch1").hide();
-  url ="";
+  url = "";
   const tbody = document.querySelector("#AP_Constituency > tbody");
   var state = document.getElementById("mySelect").value;
-  if(state == "Up"){
+  if (state == "Up") {
     // url="./json/uppartywise.json"
-    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarpradesh.allianceWiseR;
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.allianceWiseR;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/partywise_wonlead_total.php";
   }
-  else if(state == "Pb"){
-    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.punjab.allianceWiseR;
+  else if (state == "Pb") {
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.allianceWiseR;
     // url = "./json/pbpartywise.json";
-  }else if(state == "Uk"){
-    url=appData.apiConfig.baseURL+appData.apiConfig.suffixes.uttarakhand.allianceWiseR;
+  } else if (state == "Uk") {
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.allianceWiseR;
     // url = "./json/uk-partwise.json";
   }
   while (tbody.firstChild) {
@@ -1037,7 +1037,7 @@ function getPartyResult() {
     // }
     CombinedHTMLTable = "";
     var alliance_name = '';
-    var other ="";
+    var other = "";
     var tr;
     var thead = "";
     thead = `<tr><th class='party-class'>Party/Alliance Name</th><th class='party-class'> Lead/Won</th></tr>`;
@@ -1045,12 +1045,12 @@ function getPartyResult() {
 
     for (var j = 0; j <= successdata.results.length - 1; j++) {
       if ((successdata.results[j]["alliance_name"] == undefined)) {
-        alliance_name=successdata.results[j]["party_name"]
-      
+        alliance_name = successdata.results[j]["party_name"]
+
         tr =
           "<tr>" +
           "<td class='ldf-party' style='font-weight: 700;'>" +
-          successdata.results[j]["party_name"] + '  ('+successdata.results[j]["total"]+'/'+successdata.results[j]["Seats Contested"]+')'+
+          successdata.results[j]["party_name"] + '  (' + successdata.results[j]["total"] + '/' + successdata.results[j]["Seats Contested"] + ')' +
           "</td>" +
           "<td class='ldf-party' style='font-weight: 700;'>" +
           successdata.results[j]["total"] +
@@ -1062,43 +1062,43 @@ function getPartyResult() {
           // successdata.results[j]["total"] +
           // "</td>" +
           "</tr>";
-          if(successdata.results[j]["party_name"] !== "OTHER"){
+        if (successdata.results[j]["party_name"] !== "OTHER") {
+          CombinedHTMLTable = CombinedHTMLTable + tr;
+        }
+        else {
+          other = tr;
+        }
+        getallianceParties(successdata.results, alliance_name)
+      }
+    }
+    function getallianceParties(results, alliance_name) {
+
+      var count = results.filter(function (o) { return o['alliance_name'] == alliance_name }).length
+      console.log(count)
+      if (count > 1) {
+        for (var j = 0; j <= results.length - 1; j++) {
+          if (results[j]["alliance_name"] == alliance_name) {
+            tr =
+              "<tr>" +
+              "<td class='alliancestyle'>" +
+              results[j]["party_name"] +
+              "</td>" +
+              "<td class='alliance-style'>" +
+              results[j]["total"] +
+              "</td>" +
+              // "<td class='alliance-style'>" +
+              // results[j]["won"] +
+              // "</td>" +
+              // "<td class='alliance-style'>" +
+              // results[j]["total"] +
+              // "</td>" +
+              "</tr>";
             CombinedHTMLTable = CombinedHTMLTable + tr;
           }
-          else{
-            other = tr;
-          }
-          getallianceParties(successdata.results, alliance_name)
-        }
-    }
-    function getallianceParties(results, alliance_name){
-     
-      var count = results.filter(function(o) {return o['alliance_name'] ==alliance_name}).length
-      console.log(count)
-    if(count>1){
-      for (var j = 0; j <= results.length - 1; j++) {
-        if (results[j]["alliance_name"] == alliance_name) {
-          tr =
-            "<tr>" +
-            "<td class='alliancestyle'>" +
-            results[j]["party_name"] +
-            "</td>" +
-            "<td class='alliance-style'>" +
-            results[j]["total"] +
-            "</td>" +
-            // "<td class='alliance-style'>" +
-            // results[j]["won"] +
-            // "</td>" +
-            // "<td class='alliance-style'>" +
-            // results[j]["total"] +
-            // "</td>" +
-            "</tr>";
-          CombinedHTMLTable = CombinedHTMLTable + tr;
         }
       }
     }
-    }
-    CombinedHTMLTable =CombinedHTMLTable +other
+    CombinedHTMLTable = CombinedHTMLTable + other
     $("#constituency_tbody").html(CombinedHTMLTable);
     $("#tdSearch").on("keyup", function () {
       var value = $(this).val().toLowerCase();
@@ -1120,18 +1120,18 @@ function getConstResult() {
   const tbody = document.querySelector("#AP_Constituency > tbody");
   var state = document.getElementById("mySelect").value;
   // debugger;
-  if(state == "Up"){
+  if (state == "Up") {
     // url='./json/upconstwise.json';
-    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.constwiseR;
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.constwiseR;
     // url = "http://65.0.40.45/web_api/website/uttarpradesh_2022/statewise_const_tally.php";
   }
-  else if(state == "Pb"){
+  else if (state == "Pb") {
     // url='./json/pbconstwise.json';
-    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.constwiseR;
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.constwiseR;
     // url = "http://65.0.40.45/web_api/website/kerala_2021/statewise_const_tally.php";
-  }else if(state == "Uk"){
+  } else if (state == "Uk") {
     // url= './json/ukconstwise.json';
-    url =appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.constwiseR;
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.constwiseR;
     // url = "http://65.0.40.45/web_api/website/tamilnadu_2021/statewise_const_tally.php";
   }
   while (tbody.firstChild) {
@@ -1258,16 +1258,16 @@ function getPhaseResult() {
   const tbody = document.querySelector("#AP_Constituency > tbody");
   var state = document.getElementById("mySelect").value;
   // debugger;
-  if(state == "Up"){
+  if (state == "Up") {
     url = "";
   }
-  else if(state == "Pb"){
+  else if (state == "Pb") {
     url = "";
-  }else if(state == "Uk"){
+  } else if (state == "Uk") {
     url = "";
-  }else if(state == "Goa"){
+  } else if (state == "Goa") {
     url = "";
-  }else if(state == "Mn"){
+  } else if (state == "Mn") {
     url = "";
   }
   while (tbody.firstChild) {
@@ -1500,20 +1500,20 @@ function pbElectionBanner() {
 //   });
 // }
 // var state_el="";
-function selectState(){
+function selectState() {
   var state_el = document.getElementById("mySelect").value;
-  if (state_el == "Up"){
+  if (state_el == "Up") {
     // document.getElementById("state-name").innerHTML = "UTTARPRADESH";
     upElectionBanner();
- 
-  }else if( state_el == "Pb"){
+
+  } else if (state_el == "Pb") {
     // document.getElementById("state-name").innerHTML = "PUNJAB";
     pbElectionBanner()
-  }else if( state_el == "Uk"){
+  } else if (state_el == "Uk") {
     // document.getElementById("state-name").innerHTML = "UTTARAKHAND";
     ukElectionBanner();
   }
-  
+
   $('button').removeClass('clicked');
   $('button').removeClass('active');
   $("button.dist").addClass('clicked')
@@ -1528,7 +1528,7 @@ $(document).ready(function () {
   getLiveStateNews();
 
   $("#vip-list").hide();
-  
+
   // bannerAdd();
   setInterval(() => {
     // electionResults();
@@ -1558,7 +1558,7 @@ $(document).ready(function () {
     } else if ($("button.vip").hasClass("clicked")) {
       // document.getElementById('tdSearch').value;
       getVipResult();
-    } 
+    }
     // getPcConst();
   }, 30000);
 });
