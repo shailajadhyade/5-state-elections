@@ -1074,7 +1074,7 @@ function getPartyResult() {
     function getallianceParties(results, alliance_name) {
 
       var count = results.filter(function (o) { return o['alliance_name'] == alliance_name }).length
-      console.log(count)
+      // console.log(count)
       if (count > 1) {
         for (var j = 0; j <= results.length - 1; j++) {
           if (results[j]["alliance_name"] == alliance_name) {
