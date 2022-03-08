@@ -705,7 +705,7 @@ function fiveStateTally(CombineTable, theadh, state) {
   var t="";
   for(i=0;i<theadh.length;i++){
     theadh[i]= theadh[i]==="OTHERS"? "OTH": theadh[i];
-    t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div style='border-left: 1px solid #bb454f;' width='100'>" +theadh[i] +"</div></th>";
+    t = t+"<th class='tdata2' style='background: #B80403;font-weight: 700;'><div width='100'>" +theadh[i] +"</div></th>";
   }
   CombineTable = "<tr><th class='lead-won' style='background: #B80403;'><div> </div></th>"+t + "</tr><tr>" + "<td class='lead-won' style='font-weight: 700;'>Lead/won</td>"+CombineTable + "</tr>";
   if(state==="UP"){
@@ -743,7 +743,7 @@ function electionResults() {
       for (i = 0; i < response.totalresults.length; i++) {
         if (response.totalresults[i].state_id == arr[j] && response.totalresults[i].party_name) {
           theadh.push(response.totalresults[i].party_name);
-           trf = "<td>" + response.totalresults[i].total + "</td>";
+           trf = "<td class='td-style'>" + response.totalresults[i].total + "</td>";
           CombineTable = CombineTable + trf;
         }else if (response.totalresults[i].total_seats == totaltally[j]) {
           var countTally = response.totalresults[i].total_count;
@@ -1531,7 +1531,7 @@ $(document).ready(function () {
   
   // bannerAdd();
   setInterval(() => {
-    electionResults();
+    // electionResults();
   }, 30000);
 
   getDistrictResult();

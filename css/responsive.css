@@ -21,6 +21,9 @@
 }
 
 @media only screen and (max-width : 1824px) {
+	.choose-state{
+		padding-right: 5%;
+	}
 	.tally-scroll{
 		height: 290px;
 	}
@@ -75,9 +78,12 @@
 		.UK-LW-width{
 			width: 40px !important;
 		}
+		.tally-mob{
+			padding-right: 15px;
+		}
 	.state-name{
-		font-size: 18px;
-		padding: 5px 0 5px 10px;
+		font-size: 18px !important;
+		padding: 5px 0 5px 4px;
 	}
 	.puducherry-name{
 		font-size: 16px;
@@ -98,12 +104,19 @@
 }
 
 @media only screen and (max-width: 1199px){
+	.lead-won{
+		font-size: 13px !important;
+		font-weight: 600 !important;
+	}
+	.tally-mob{
+		padding-right: 12px;
+	}
 	.pers-blg-text h4 {
 		font-size: 15px !important;
 		margin-left: 30px !important;
 	}
 	.puducherry-name{
-		font-size: 14px;
+		font-size: 16px !important;
 		padding: 7px 0 7px 2px;
 	}
 	.pers-blg-text h4 {
@@ -132,13 +145,39 @@
 		padding-left: 0px;
 	}
 }
+@media only screen and (max-width: 1120px){
+	.lead-won{
+		font-size: 13px !important;
+		font-weight: 500 !important;
+	}
+	.td-border tr td,.td-border tr th{
+		font-size: 13px !important;
+		padding: 4px 1px !important;
+	}
+	.tdata2{
+		/* font-size: 14px !important; */
+		font-weight: 600 !important;
+	}
+	
+	.tally-mob{
+		padding-right: 12px;
+	}
+	.puducherry-name{
+		font-size: 16px !important;
+		padding: 7px 0 7px 2px;
+	}
+}
 @media only screen and (max-width: 1040px){
+	
 	.pers-blg-text h4 {
 		font-size: 14px !important;
 		margin-left: 30px !important;
 	}
 }
 @media only screen and (max-width: 1024px){
+	.uk-rsp{
+		padding-right: 10px !important;
+	}
 	h1{
 		font-size: 30px;
 	}
@@ -258,6 +297,12 @@
 	
 }
 @media only screen and (max-width : 1021px) {
+	.state-name{
+		font-size: 15px !important;
+	}
+	.lead-won{
+		font-size: 13px !important;
+	}
 	
 	.pers-blg-text h4 {
 		font-size: 14px !important;
@@ -297,6 +342,22 @@
 	}
 }
 @media only screen and (max-width : 991px) {
+	.uk-rsp{
+		padding-right: 15px !important;
+	}
+	.tally-mob{
+		padding-right: 15px;
+	}
+	.state-name{
+		font-size: 22px !important;
+	}
+	.td-border tr td,.td-border tr th{
+		font-size: 16px !important;
+		padding: 4px 4px !important;
+	}
+	.td-border tr th{
+		font-weight: 700 !important;
+	}
 	/* #Pb_data tr .lead-won, #Ga_data tr .lead-won, #Mnr_data tr .lead-won{
 		display: block;
 	} */
@@ -537,6 +598,13 @@
 }
 
 @media only screen and (max-width: 540px){	
+	.td-border tr td,.td-border tr th{
+		font-size: 15px !important;
+		padding: 4px 1px !important;
+	}
+	.tally-mob{
+		padding-right: 20px !important;
+	}
 	#mySelect{
 		width: 180px !important;
 		margin-top: 15px !important;
@@ -562,9 +630,9 @@
 	#mob-ad1, #mob-ad2, #mob-ad3{
 		display: block !important;
 	} */
-	.tally-mob{
+	/* .tally-mob{
 		padding-right: 2px !important;
-	}
+	} */
 	.tally-table{
 		padding-right: 10px !important;
     	padding-left: 10px !important;
@@ -618,6 +686,19 @@
 		
 }
 @media only screen and (max-width: 460px){
+	.tally-mob{
+		padding-right: 5px !important;
+	}
+	.row{
+		margin-right: -7px !important;
+	}
+	.td-border tr td,.td-border tr th{
+		font-size: 15px !important;
+		padding: 4px 2px !important;
+	}
+	.tdata2 div{
+		font-weight: 600 !important;
+	}
 	.btn5{
 		font-size: 14px !important;
 	}
@@ -636,6 +717,11 @@
 }
 	}
 @media only screen and (max-width: 360px){
+	.td-border tr td,.td-border tr th{
+		font-size: 14px !important;
+		padding: 4px 1px !important;
+	}
+	
 	.btn5{
 		font-size: 12px !important;
 	}
@@ -675,7 +761,13 @@
 	top: 33%;
 }	
 }
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 325px){
+	.tdata2 div {
+		font-size: 14px !important;
+	}
+	.state-name{
+		font-size: 17px !important;
+	}
 	.year{
 		font-size: 15px;
 	}
