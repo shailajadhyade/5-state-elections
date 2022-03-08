@@ -15,14 +15,14 @@ var list1 = [],
   list4 = [],
   list5 = [],
   all_5_states = [];
-// var url1 ="http://mcapi.etvbharat.com/web_api/website/kerala_2021/five_states_common_tally.php";
+// var url1 ="http://rut.api.etvbharat.com/web_api/website/kerala_2021/five_states_common_tally.php";
 // var test="";
 // var stremingURLs;
 var appData = {
   apiConfig: {
     // appData.apiConfig.baseURL + appData.apiConfig.suffixes.getState
     // baseURL: "http://65.0.40.45/web_api/website/",
-    baseURL: "https://mcapi.etvbharat.com/web_api/website/",
+    baseURL: "https://rut.api.etvbharat.com/web_api/website/",
 
     suffixes: {
       getState: "getLanguage.php",
