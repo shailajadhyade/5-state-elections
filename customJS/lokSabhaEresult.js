@@ -269,11 +269,14 @@ function getLiveStateNews() {
     $("#divPlayer").attr('src', test1);
   } else {
     // var test1 ='./images/ads/standard-side-ad-2.jpg';
-    var player = `<div id='div-gpt-ad-1646308362127-0' style='min-width: 300px; min-height: 250px;margin-top:40px;'>
-    <script>
-      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1646308362127-0'); });
-    </script>
-  </div>`;
+    var test1 = 'https://d16f45e0h78rsl.cloudfront.net/out/v1/4b73cef0e43c4e378ccd0c90caccea37/ETVB_CF_JK_Live1.m3u8';
+    var player = '<iframe style="width:100%; margin-top:20px; height:300px;" id="live-player" class="liveplayer" allowfullscreen="true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=' + test1 + '&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true"></iframe>';
+
+  //   var player = `<div id='div-gpt-ad-1646308362127-0' style='min-width: 300px; min-height: 250px;margin-top:40px;'>
+  //   <script>
+  //     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1646308362127-0'); });
+  //   </script>
+  // </div>`;
     $('#test-player').html(player);
     // $("#divPlayer").attr('src' , test1);
   }
