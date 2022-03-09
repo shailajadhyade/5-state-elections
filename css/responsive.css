@@ -460,7 +460,7 @@
 	top: 34%;
 }
 .constituency-scroll {
-	height: 300px;
+	height: 600px;
 }
 .state-blg {
 	min-height: auto !important;
@@ -501,6 +501,9 @@
 	} */
 }
 @media only screen and (max-width: 768px){
+	.dist1 div{
+		font-size: 18px;
+	}
 	.img-blg img{
 		margin-left: -27%;
 	}
