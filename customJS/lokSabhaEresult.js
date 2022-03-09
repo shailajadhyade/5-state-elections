@@ -255,6 +255,7 @@ function getLiveStateNews() {
   // var parentURL = 'https://www.etvbharat.com/bengali/kerala';
   var temp = parentURL.split("/");
   // var lang = temp[4];
+  // national = temp[3]
   national = "hindi";
   if (national == "hindi" || national == "english") {
     var test1 = 'https://dgt6f5s87pgbo.cloudfront.net/out/v1/dd6e383c67c44d20a41a358679edd9c7/ETVB_CF_JK_Live3.m3u8';
@@ -278,7 +279,33 @@ function getLiveStateNews() {
     // $("#divPlayer").attr('src' , test1);
   }
 
-
+  if(national == "hindi"){
+    $('#heading-tag').html('विधानसभा चुनाव 2022 परिणाम लाइव');
+  } else if(national == "telugu"){
+    $('#heading-tag').html('అసెంబ్లీ ఎలక్షన్స్ 2022 రిజల్ట్ లైవ్');
+  }else if(national == "assamese"){
+    $('#heading-tag').html('বিধানসভা নিৰ্বাচন 2022 ৰ ফলাফল লাইভ');
+  }else if(national == "urdu"){
+    $('#heading-tag').html('اسمبلی انتخابات 2022 نتیجہ لائیو,');
+  }else if(national == "kannada"){
+    $('#heading-tag').html('ವಿಧಾನಸಭಾ ಚುನಾವಣೆ 2022 ಫಲಿತಾಂಶ ನೇರಪ್ರಸಾರ');
+  }else if(national == "malayalam"){
+    $('#heading-tag').html('നിയമസഭ തെരഞ്ഞെടുപ്പ്  ഫലം 2022 തത്സമയം ');
+  }else if(national == "marathi"){
+    $('#heading-tag').html('विधानसभा निवडणूक २०२२ निकाल लाईव्ह');
+  }else if(national == "oriya"){
+    $('#heading-tag').html('ବିଧାନସଭା ନିର୍ବାଚନ 2022 ଫଳାଫଳ ଲାଇଭ');
+  }else if(national == "punjabi"){
+    $('#heading-tag').html('Punjab Election 2022 Results Live');
+  }else if(national == "tamil"){
+    $('#heading-tag').html('சட்டப்பேரவை தேர்தல் 2022 முடிவுகள் நேரலை');
+  }else if(national == "bengali"){
+    $('#heading-tag').html('বিধানসভা নির্বাচন ২০২২ ফলাফল লাইভ');
+  }else if(national == "english"){
+    $('#heading-tag').html('Assembly Elections 2022 Result Live');
+  }else if(national == "gujarati"){
+    $('#heading-tag').html('વિધાનસભા ચૂંટણી 2022નું પરિણામ લાઈવ');
+  }
   // $('#livedebate').css('font-weight','600');
   // $('#livenews').css('color','white');
   // $("#livenews").css("font-weight", "600");
