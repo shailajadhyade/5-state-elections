@@ -119,8 +119,7 @@ tr:nth-child(odd) {background-color: #eee;} */
 	margin-top: 10px; 
 	background-color: #fff; 
 	color: #B80403;
-	border-radius: 5% #B80403;
-	text-align: center;
+    text-align: center;
 	font-weight: bold;
 	letter-spacing: 0.5px;
 } 
