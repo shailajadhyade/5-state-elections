@@ -23,6 +23,7 @@
 } */
 /* tr:nth-child(even) {background-color: #ddd;}
 tr:nth-child(odd) {background-color: #eee;} */
+
 @media only screen and (max-width: 500px) {
 	#datawrapper-chart-I19Oa{
 		height:430px;
@@ -58,9 +59,18 @@ tr:nth-child(odd) {background-color: #eee;} */
 	}
   }
 
-  .districts{
-	  padding-left: 5px !important;
-  }
+
+
+
+
+
+.td-style{
+	font-weight: 500 !important;
+}
+
+.districts{
+	padding-left: 5px !important;
+}
 
 .district-name td{
 	border: 1px solid #B80403 !important;
@@ -220,11 +230,13 @@ color: white;
   font-weight: 700;
   background-color: #bcbcbc;
 }
+.const-row, .alliance-row{
+	display: table-row !important;
+}
 .const-row{
   border-bottom: 1px;
   position: sticky;
   top: 0px;
-  
 }
 .col-set{
   margin-left: 4.166666667%;
@@ -327,12 +339,11 @@ button {
   font-size:17px;  
   border:0;
 }
-.edhyna{
+.district-td{
   background-color: #F6F6F6;
   /* border:1px solid #aaa4a4; */
   font-size: 20px;
   font-weight: 500;
-  
 }
 .dist1 div{
   border-left: 3px solid #B80403 !important;
