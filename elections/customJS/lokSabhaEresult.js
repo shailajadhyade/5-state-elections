@@ -37,13 +37,13 @@ var appData = {
         distResult: "uttarakhand_2022/districtwise_party_tally.php",
         constwiseR: "uttarakhand_2022/statewise_const_tally.php",
         allianceWiseR: "uttarakhand_2022/partywise_wonlead_total.php",
-        viplistup: "uttarakhand_2022/vipcandidates_wonlead.php",
+        viplistuk: "uttarakhand_2022/vipcandidates_wonlead.php",
       },
       punjab: {
         distResult: "punjab_2022/districtwise_party_tally.php",
         constwiseR: "punjab_2022/statewise_const_tally.php",
         allianceWiseR: "punjab_2022/partywise_wonlead_total.php",
-        viplistup: "punjab_2022/vipcandidates_wonlead.php",
+        viplistpb: "punjab_2022/vipcandidates_wonlead.php",
       },
 
       // partyWiseResults: "partywise_wonlead_total.php?language=english",
@@ -251,13 +251,14 @@ function getLiveStateNews() {
   //   '&thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&autoplay=true&mute=true&content_type=live"></iframe>';
   // $("#test-player").html(player);
   // $("#divPlayer").attr("src", test);
+  // var parentURL = document.location.href
   var parentURL = document.referrer;
   // var parentURL = 'https://www.etvbharat.com/bengali/kerala';
   var temp = parentURL.split("/");
   // var lang = temp[4];
   // national = temp[3]
   national = "hindi";
-  if (national == "hindi" || national == "english") {
+  if (national == "hindi" || national == "english" || national == 'urdu') {
     var test1 = 'https://dgt6f5s87pgbo.cloudfront.net/out/v1/dd6e383c67c44d20a41a358679edd9c7/ETVB_CF_JK_Live3.m3u8';
     var player = '<iframe style="width:100%; margin-top:20px; height:300px;" id="live-player" class="liveplayer" allowfullscreen="true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=' + test1 + '&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true" src="https://etvbharatimages.akamaized.net/player/etvbharat-staging/embed_etv.html?contenturl=https://etvbharatlive7.akamaized.net/hls/live/710673/kerala/index.m3u8&amp;thumbnailurl=https://etvwinvideo.akamaized.net/etv-bharat/images/placeholder.png&amp;autoplay=true&amp;mute=true&amp;content_type=live&amp;content_id=keralaml20181012194643400&amp;v=0.007124921779837923&amp;comscorec3=23&amp;state=kerala&amp;language=malayalam&amp;daistream=true"></iframe>';
     $('#test-player').html(player);
@@ -330,12 +331,15 @@ function getVipResult() {
   // debugger;
   const tbody = document.querySelector("#AP_Constituency > tbody");
   if (state == "Up") {
-    url = "/json/vip.json";
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarpradesh.viplistup;
+    // url = "/json/vip.json";
   }
   else if (state == "Pb") {
-    url = "/json/vip.json";
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.punjab.viplistpb;
+    // url = "/json/vip.json";
   } else if (state == "Uk") {
-    url = "/json/vip.json";
+    url = appData.apiConfig.baseURL + appData.apiConfig.suffixes.uttarakhand.viplistuk;
+    // url = "/json/vip.json";
   }
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
@@ -383,24 +387,25 @@ function getVipResult() {
         leadingBlogElement =
           "<span class='leading-blog'>" + leadings + "</span>";
         var winlose =
-          '<div><img class="win" src="/images/states/WIN_THUMB.png"  alt=""/></div>';
+          '<div><img class="win" style="margin-left:-40px" src="/elections/images/states/WIN_THUMB.png"  alt=""/></div>';
       } else if (personailty.leadings.toLowerCase() == "won") {
         leadingBlogElement = "<span class='won-blog'>" + leadings + "</span>";
         var winlose =
-          '<div><img class="win" src="/images/states/WIN_THUMB.png"  alt=""/></div>';
+          '<div><img class="win" style="margin-left:-40px" src="/elections/images/states/WIN_THUMB.png"  alt=""/></div>';
       } else if (personailty.leadings.toLowerCase() == "trailing") {
         leadingBlogElement =
           "<span class='trailing-blog'>" + leadings + "</span>";
         var winlose =
-          '<div><img src="/images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
+          '<div><img src="/elections/images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
       } else if (personailty.leadings.toLowerCase() == "lost") {
         leadingBlogElement = "<span class='lost-blog'>" + leadings + "</span>";
         var winlose =
-          '<div><img src="/images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
+          '<div><img src="/elections/images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
       } else {
         leadingBlogElement = "<span class='lost-blog'>" + leadings + "</span>";
-        // var winlose = '<div><img src="images/states/LOOSE_THUMB.png" class="lose" alt=""/></div>';
+        var winlose = "";
       }
+      debugger
       var heder4 =
         "<h4> " +
         personailty.candidate +
@@ -417,8 +422,7 @@ function getVipResult() {
         "</div>";
       var img =
         '<img style="margin-left:0px" id="vip-image" src="https://jh-vip-images.s3.ap-south-1.amazonaws.com/' +
-        personailty.img +
-        '.jpg" alt="">' +
+        personailty.img + '"  alt="">' +
         winlose;
       var firstDiv =
         "<div class='img-blg col-lg-2 col-md-3 col-sm-2 col-xs-3 no-pad' >" +
@@ -439,7 +443,7 @@ function getVipResult() {
       .on("error", function () {
         $(this).attr(
           "src",
-          "https://etvelection.s3.ap-south-1.amazonaws.com/vipimages/common.jpg"
+          "https://jh-vip-images.s3.ap-south-1.amazonaws.com/DUMMY.jpg"
         );
       });
     $("#tdSearch").on("keyup", function () {
