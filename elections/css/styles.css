@@ -61,7 +61,9 @@ tr:nth-child(odd) {background-color: #eee;} */
 
 
 
-
+.tally-mob{
+	overflow: inherit !important;
+}
 
 
 .td-style{
